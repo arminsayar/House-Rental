@@ -11,20 +11,28 @@ body {
   overflow-x: hidden;
   width: 100vw;
   height: 100vh;
-  font-family: Circularlight;
+  font-family: Circular BOLD;
+}
+@font-face {
+  font-family: Circular BOLD;
+  src: url(fonts/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2);
 }
 
 @font-face {
-  font-family: Circular;
-  src: url(fonts/Circular\ Std\ Font.otf);
+  font-family: Circular Medium;
+  src: url(fonts/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2);
 }
 @font-face {
-  font-family: Circularbold;
-  src: url(fonts/circularbold.woff2);
+  font-family: Circular BOOK;
+  src: url(fonts/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2);
 }
 @font-face {
-  font-family: Circularlight;
-  src: url(fonts/circularlight.woff2);
+  font-family: Circular K1;
+  src: url(fonts/KFOlCnqEu92Fr1MmEU9fBBc4.woff2);
+}
+@font-face {
+  font-family: Circular K2;
+  src: url(fonts/KFOmCnqEu92Fr1Mu4mxK.woff2);
 }
 
 /* -----------EXPLORE NEARBY------------------ */
@@ -36,7 +44,6 @@ body {
 .explore-title,
 .live-title {
   font-size: 32px;
-  font-family: Circularbold;
   line-height: 52px;
   color: #222222;
   white-space: pre-line;
@@ -64,21 +71,25 @@ body {
   line-height: 20px;
   color: rgb(34, 34, 34);
 }
+.item-text span {
+  font-family: Circular BOOK;
+}
 .explore-item p {
-  font-family: Circularbold;
+  font-family: Circular Medium;
 }
 /* -----------------LIVE ANYWHERE SECTION------------ */
 .section-1-live-anywhere {
   width: 1206px;
-  margin: 20px auto;
-  /* width: 85%; needs to change */
+  margin: 20px auto 50px auto; /* bottom needs to change */
 }
 .live-flex {
   display: flex;
   justify-content: space-between;
 }
+.live-title {
+  margin: 40px 0px 20px 0px;
+}
 .live-item img {
-  /* margin: 10px 0px 10px 0px; */
   width: 288px;
   height: 288px;
   border-radius: 8px;
@@ -86,7 +97,7 @@ body {
 
 .live-item p {
   color: rgb(34, 34, 34);
-  font-family: Circularbold;
+  font-family: Circular Medium;
   font-size: 18px;
   line-height: 22px;
   padding-top: 5px;
