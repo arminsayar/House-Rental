@@ -1,20 +1,93 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
-    font-family: Circular;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: Circularlight;
 }
 
 @font-face {
-    font-family: Circular;
-    src: url(fonts/Circular\ Std\ Font.otf);
+  font-family: Circular;
+  src: url(fonts/Circular\ Std\ Font.otf);
+}
+@font-face {
+  font-family: Circularbold;
+  src: url(fonts/circularbold.woff2);
+}
+@font-face {
+  font-family: Circularlight;
+  src: url(fonts/circularlight.woff2);
+}
+
+/* -----------EXPLORE NEARBY------------------ */
+.section-1-explore {
+  width: 1206px;
+  margin: 20px auto;
+  /* width: 85%; needs to change */
+}
+.explore-title,
+.live-title {
+  font-size: 32px;
+  font-family: Circularbold;
+  line-height: 52px;
+  color: #222222;
+  white-space: pre-line;
+}
+.explore-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.explore-item {
+  display: flex;
+  width: 25%;
+  margin: 10px 0px 10px 0px;
+}
+.explore-item img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+}
+.item-text {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(34, 34, 34);
+}
+.explore-item p {
+  font-family: Circularbold;
+}
+/* -----------------LIVE ANYWHERE SECTION------------ */
+.section-1-live-anywhere {
+  width: 1206px;
+  margin: 20px auto;
+  /* width: 85%; needs to change */
+}
+.live-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.live-item img {
+  /* margin: 10px 0px 10px 0px; */
+  width: 288px;
+  height: 288px;
+  border-radius: 8px;
+}
+
+.live-item p {
+  color: rgb(34, 34, 34);
+  font-family: Circularbold;
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 5px;
 }
