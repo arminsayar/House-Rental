@@ -11,10 +11,119 @@ body {
     overflow-x: hidden;
     width: 100vw;
     height: 100vh;
-    font-family: Circular;
+    font-family: Circular BOLD;
 }
 
 @font-face {
-    font-family: Circular;
-    src: url(fonts/Circular\ Std\ Font.otf);
+    font-family: Circular BOLD;
+    src: url(fonts/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2);
+}
+
+@font-face {
+    font-family: Circular Medium;
+    src: url(fonts/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2);
+}
+@font-face {
+    font-family: Circular BOOK;
+    src: url(fonts/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2);
+}
+@font-face {
+    font-family: Circular K1;
+    src: url(fonts/KFOlCnqEu92Fr1MmEU9fBBc4.woff2);
+}
+@font-face {
+    font-family: Circular K2;
+    src: url(fonts/KFOmCnqEu92Fr1Mu4mxK.woff2);
+}
+
+header {
+    background-image: url(images/57b9f708-bb12-498c-bc33-769f8fc43e63.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 100%;
+    height: calc(100% - 154px);
+}
+
+#nav-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 160px;
+    height: 80px;
+}
+
+#nav-logo {
+    filter: invert(100%);
+}
+
+#nav-texts {
+    color: #F1F1F1;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    display: flex;
+}
+
+.nav-links {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 10px 16px;
+    font-family: Circular Medium;
+}
+
+#nav-pannel {
+    display: flex;
+    align-items: center;
+    color: #F1F1F1;
+}
+
+#nav-la-img {
+    width: 16px;
+    filter: invert(100%);
+}
+
+#nav-la {
+    margin-left: 20px;
+    height: 43px;
+    display: flex;
+}
+
+#nav-tx {
+    height: 43px;
+    display: flex;
+    align-items: center;
+    font-family: Circular BOLD;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+
+#nav-pic {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 5px 5px 12px;
+    border-radius: 21px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#nav-pic>div:nth-child(1),
+#nav-pic>div:nth-child(2) {
+    height: 33px;
+    display: flex;
+    align-items: center;
+}
+
+#nav-menu {
+    width: 16px;
+    color: #717171;
+}
+
+#nav-pro {
+    margin-left: 10px;
+    color: #717171;
 }
