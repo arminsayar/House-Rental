@@ -1,20 +1,27 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
-    font-family: Circular;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: Circular;
 }
 
 @font-face {
-    font-family: Circular;
-    src: url(fonts/Circular\ Std\ Font.otf);
+  font-family: Circular;
+  src: url(fonts/Circular\ Std\ Font.otf);
+}
+
+/* inspiration */
+.art-culture-links,
+.inspiration-titles {
+  display: flex;
+  justify-content: space-around;
 }
