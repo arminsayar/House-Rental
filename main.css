@@ -22,102 +22,119 @@ a {
 html,
 body {
 
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100vw;
-  height: 100vh;
-  font-family: Circular BOLD;
-}
-@font-face {
-  font-family: Circular BOLD;
-  src: url(fonts/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    font-family: Circular BOLD;
 }
 
 @font-face {
-  font-family: Circular Medium;
-  src: url(fonts/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2);
+    font-family: Circular BOLD;
+    src: url(fonts/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2);
 }
+
 @font-face {
-  font-family: Circular BOOK;
-  src: url(fonts/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2);
+    font-family: Circular Medium;
+    src: url(fonts/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2);
 }
+
 @font-face {
-  font-family: Circular K1;
-  src: url(fonts/KFOlCnqEu92Fr1MmEU9fBBc4.woff2);
+    font-family: Circular BOOK;
+    src: url(fonts/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2);
 }
+
 @font-face {
-  font-family: Circular K2;
-  src: url(fonts/KFOmCnqEu92Fr1Mu4mxK.woff2);
+    font-family: Circular K1;
+    src: url(fonts/KFOlCnqEu92Fr1MmEU9fBBc4.woff2);
+}
+
+@font-face {
+    font-family: Circular K2;
+    src: url(fonts/KFOmCnqEu92Fr1Mu4mxK.woff2);
 }
 
 /* -----------EXPLORE NEARBY------------------ */
 .section-1-explore {
-  width: 1206px;
-  margin: 20px auto;
-  /* width: 85%; needs to change */
+    width: 1206px;
+    margin: 20px auto;
+    /* width: 85%; needs to change */
 }
+
 .explore-title,
 .live-title {
-  font-size: 32px;
-  line-height: 52px;
-  color: #222222;
-  white-space: pre-line;
+    font-size: 32px;
+    line-height: 52px;
+    color: #222222;
+    white-space: pre-line;
 }
+
 .explore-flex {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 .explore-item {
-  display: flex;
-  width: 25%;
-  margin: 10px 0px 10px 0px;
+    display: flex;
+    width: 25%;
+    margin: 10px 0px 10px 0px;
 }
+
 .explore-item img {
-  width: 64px;
-  height: 64px;
-  border-radius: 8px;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
 }
+
 .item-text {
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  color: rgb(34, 34, 34);
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(34, 34, 34);
 }
+
 .item-text span {
-  font-family: Circular BOOK;
+    font-family: Circular BOOK;
 }
+
 .explore-item p {
-  font-family: Circular Medium;
+    font-family: Circular Medium;
 }
+
 /* -----------------LIVE ANYWHERE SECTION------------ */
 .section-1-live-anywhere {
-  width: 1206px;
-  margin: 20px auto 50px auto; /* bottom needs to change */
+    width: 1206px;
+    margin: 20px auto 50px auto;
+    /* bottom needs to change */
 }
+
 .live-flex {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
+
 .live-title {
-  margin: 40px 0px 20px 0px;
+    margin: 40px 0px 20px 0px;
 }
+
 .live-item img {
-  width: 288px;
-  height: 288px;
-  border-radius: 8px;
+    width: 288px;
+    height: 288px;
+    border-radius: 8px;
 }
 
 .live-item p {
-  color: rgb(34, 34, 34);
-  font-family: Circular Medium;
-  font-size: 18px;
-  line-height: 22px;
-  padding-top: 5px;
+    color: rgb(34, 34, 34);
+    font-family: Circular Medium;
+    font-size: 18px;
+    line-height: 22px;
+    padding-top: 5px;
 }
+
 /* ------SECTION 2 ----------- */
 
 #sec2-p1-main {
@@ -148,6 +165,7 @@ body {
     line-height: 52px;
     font-family: Circular BOOK;
     max-width: 544px;
+}
 
 header {
     background-image: url(images/57b9f708-bb12-498c-bc33-769f8fc43e63.webp);
@@ -191,6 +209,7 @@ header>div:nth-child(1) {
     line-height: 20px;
     font-weight: 400;
     display: flex;
+    position:relative;
 }
 
 .nav-links {
@@ -339,6 +358,7 @@ header>div:nth-child(1) {
     margin: 0 auto;
     border-radius: 32px;
     box-shadow: 0px 16px 32px rgb(0 0 0 / 15%), 0px 3px 8px rgb(0 0 0 / 10%);
+    position: relative;
 }
 
 .nav-search-styles {
@@ -622,6 +642,7 @@ header>div:nth-child(1) {
     box-shadow: 0px 6px 16px rgb(0 0 0 / 20%);
 
 }
+
 #flex-btn-js>div:nth-child(1)>h1 {
     color: #222222;
     font-weight: 800;
@@ -707,4 +728,3 @@ header>div:nth-child(1) {
     font-family: Circular BOLD;
     padding: 10px 0 5px 0;
 }
-
