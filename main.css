@@ -927,7 +927,10 @@ li>a:hover {
   color: #484848;
   text-decoration: underline;
 }
-
+.footer-li-h:hover {
+  color: #222222;
+  text-decoration: none;
+}
 li {
   margin-bottom: 16px;
 }
