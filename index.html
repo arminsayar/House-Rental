@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" type="text/css">
     <link rel="icon" href="images/favicon.ico" type="image/icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>AirBnB</title>
 </head>
 
@@ -24,9 +27,9 @@
             <div id="nav-pannel">
                 <div id="nav-tx"><span>Become a host</span></div>
                 <div id="nav-la"><img id="nav-la-img" src="images/download (4).svg" alt="la"></div>
-                <button>
+                <button id="profile-btn">
                     <div id="nav-pic">
-                        <div>
+                        <div id="nav-pic__1">
                             <svg id="nav-menu" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                                 role="presentation" focusable="false"
                                 style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
@@ -37,7 +40,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <div>
+                        <div id="nav-pic__2">
                             <svg id="nav-pro" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                                 role="presentation" focusable="false"
                                 style="display: block; height: 30px; width: 30px; fill: currentcolor;">
@@ -48,7 +51,7 @@
                         </div>
 
                     </div>
-                    <div id="nav-menu-js">
+                    <div class="nav-menu-js">
                         <a href="#">Sign up</a>
                         <a href="#">Log in</a>
                         <a href="#">Host your home</a>
@@ -95,28 +98,29 @@
                     </div>
                 </div>
             </button>
-        </div>
-        <div id="location-js">
-            <div>
+            <div class="location-js">
                 <div>
-                    GO ANYWHERE, ANYTIME
-                </div>
-                <div>
-                    <button id="flex-btn-js">
-                        <div>
-                            <h1>I’m flexible</h1>
-                        </div>
-                        <div><video autoplay="" crossorigin="anonymous" playsinline=""
-                                poster="https://a0.muscache.com/pictures/04c0a34f-9880-48b7-a69c-49011f602a35.jpg"
-                                preload="auto" width="28" height="28" __idm_id__="642381826">
-                                <source
-                                    src="https://a0.muscache.com/v/3d/fc/3dfc1c47-7bfb-5a3b-a969-ed42ae03c901/3dfc1c477bfb5a3ba969ed42ae03c901_200k_1.mp4?impolicy=low_quality"
-                                    type="video/mp4">
-                            </video></div>
-                    </button>
+                    <div>
+                        GO ANYWHERE, ANYTIME
+                    </div>
+                    <div>
+                        <button id="flex-btn-js">
+                            <div>
+                                <h1>I’m flexible</h1>
+                            </div>
+                            <div><video autoplay="" crossorigin="anonymous" playsinline=""
+                                    poster="https://a0.muscache.com/pictures/04c0a34f-9880-48b7-a69c-49011f602a35.jpg"
+                                    preload="auto" width="28" height="28" __idm_id__="642381826">
+                                    <source
+                                        src="https://a0.muscache.com/v/3d/fc/3dfc1c47-7bfb-5a3b-a969-ed42ae03c901/3dfc1c477bfb5a3ba969ed42ae03c901_200k_1.mp4?impolicy=low_quality"
+                                        type="video/mp4">
+                                </video></div>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div id="nav-btn-main">
             <div>Not sure where to go? Perfect.</div>
             <div>
