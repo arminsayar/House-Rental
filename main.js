@@ -7,6 +7,9 @@ $('#profile-btn').click(function () {
     $('.location-js').hasClass('dis-bl') ?
         $('.location-js').removeClass('dis-bl')
         : null;
+    $('.flexible-main').hasClass('flexible-menu-on') ?
+        $('.flexible-main').removeClass('flexible-menu-on')
+        : null;
 
 })
 
@@ -16,6 +19,9 @@ $('.btn-before').click(function () {
     $('.location-js').toggleClass('dis-bl');
     $('.nav-menu-js').hasClass('dis-bl') ?
         $('.nav-menu-js').removeClass('dis-bl')
+        : null;
+    $('.flexible-main').hasClass('flexible-menu-on') ?
+        $('.flexible-main').removeClass('flexible-menu-on')
         : null;
 })
 
@@ -49,6 +55,19 @@ $("svg[name='closebtn-l']").click(function () {
     $('body').css('overflow-y', 'auto');
 })
 
+// Flexible menu
+
+$('.btn-before2, .btn-before3').click(function () {
+    $('.flexible-main').toggleClass('flexible-menu-on');
+    $('.nav-menu-js').hasClass('dis-bl') ?
+        $('.nav-menu-js').removeClass('dis-bl')
+        : null;
+    $('.location-js').hasClass('dis-bl') ?
+        $('.location-js').removeClass('dis-bl')
+        : null;
+
+})
+
 // Closing clicks
 
 $(document).click(function (e) {
@@ -56,6 +75,8 @@ $(document).click(function (e) {
         (
         !$(e.target).closest('#profile-btn').length
         && !$(e.target).closest('.btn-before').length
+        && !$(e.target).closest('.btn-before2').length
+        && !$(e.target).closest('.btn-before3').length
         && !$(e.target).closest('.location-js').length
         && !$(e.target).closest('.price-list').length
         && !$(e.target).closest("button[name='pricelist']").length
@@ -66,6 +87,7 @@ $(document).click(function (e) {
         $('.price-list').removeClass('price-list-on');
         $('.lang-list').removeClass('lang-list-on');
         $('body').css('overflow-y', 'auto');
+        $('.flexible-main').removeClass('flexible-menu-on');
     }
 })
 
