@@ -21,7 +21,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   width: 100vw;
   font-family: Circular BOLD;
   position: relative;
@@ -1029,7 +1028,8 @@ ul {
   display: block;
 }
 
-.price-list {
+.price-list,
+.lang-list {
   max-width: 0;
   height: 0;
   margin: 0 auto;
@@ -1043,9 +1043,11 @@ ul {
   right: 25vw;
   border-radius: 16px;
   overflow-y: auto;  
+  overflow-x: hidden;
 }
 
-.price-list-on {
+.price-list-on,
+.lang-list-on {
   max-width: 1032px;
   height: calc(90vh + 10px);
   bottom:40px;
@@ -1053,17 +1055,19 @@ ul {
   box-shadow: 0 15px 1px 800em rgba(0, 0, 0, 50%);
 }
 
-#price-list__main {
+#price-list__main,
+#lang-list__main {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 0 80px 0 20px;
+  padding: 0 80px 0 30px;
 }
 
 .price-list__li>div>h6,
 .price-list__li>div>p {
   min-height: 18px;
+  min-width: 145px;
 }
 
 .price-list__li>div>h6 {
@@ -1119,5 +1123,15 @@ h3 {
   border-bottom: 1px solid #eee;
 }
 .price-list>div:nth-child(1) > svg {
+  cursor: pointer;
+}
+.lang-list>div:nth-child(1) {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 37px;
+  border-bottom: 1px solid #eee;
+}
+.lang-list>div:nth-child(1) > svg {
   cursor: pointer;
 }
