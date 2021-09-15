@@ -1153,7 +1153,7 @@ h3 {
   left: 0;
   background-color: #fff;
   height: calc(100vh - 560px);
-  max-width: 850px;
+  width: 850px;
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 32px;
@@ -1267,7 +1267,8 @@ h3 {
 }
 
 .months-list {
-  width: calc(100% + px);
+  min-width: 113px;
+  height:122px;
   height: calc(100% + 20px);
   border: 1px solid rgb(221, 221, 221);
   border-radius: 12px;
@@ -1277,7 +1278,7 @@ h3 {
   align-items: center;
   margin: 0 5px 10px 5px;
   cursor: pointer;
-  padding: 14px 21px 14px 21px;
+  padding: 14px 20px 14px 20px;
 }
 
 .months-list:hover {
@@ -1301,4 +1302,9 @@ h3 {
 .months-list-main {
   display: flex;
   margin: 0 60px;
+}
+
+
+.months-deactive {
+  display: none;
 }
