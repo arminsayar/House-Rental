@@ -150,8 +150,8 @@ $(document).ready(function () {
   $("body").css("overflow-x", "hidden");
 });
 
-// section 3
-// STYLES FOR ACTIVE BUTTONS SHOULD BE ADDED
+// -------------------------section 3-------------------------
+
 const title1 = document.querySelector(".title-1");
 const title2 = document.querySelector(".title-2");
 const title3 = document.querySelector(".title-3");
@@ -164,8 +164,6 @@ const mountainCabinsLinks = document.querySelector(".mountain-cabins-links");
 const beachLinks = document.querySelector(".beach-links");
 const popularLinks = document.querySelector(".popular-links");
 const uniqueLinks = document.querySelector(".unique-links");
-// const buttonStyle = document.querySelector(".button-style");
-// const buttons = document.querySelectorAll(".button-style");
 
 const titleList = [title1, title2, title3, title4, title5, title6];
 const linkList = [
@@ -188,25 +186,44 @@ function toggleClass(title) {
       linkList[i].classList.add("none");
     }
   }
+  function removeNavigationButtonClass() {
+    for (var i = 0; i < titleList.length; i++) {
+      if (titleList[i] === title) {
+        continue;
+      }
+      titleList[i].classList.remove("selected-navigation-button");
+    }
+  }
 
   if (title == titleList[0]) {
     linkList[0].classList.remove("none");
+    titleList[0].classList.add("selected-navigation-button");
+    removeNavigationButtonClass();
     addNoneClass();
   } else if (title == titleList[1]) {
     linkList[1].classList.remove("none");
+    titleList[1].classList.add("selected-navigation-button");
+    removeNavigationButtonClass();
     addNoneClass();
-    // buttons.style = "color: rgb(34, 34, 34)";
   } else if (title == titleList[2]) {
     linkList[2].classList.remove("none");
+    titleList[2].classList.add("selected-navigation-button");
+    removeNavigationButtonClass();
     addNoneClass();
   } else if (title == titleList[3]) {
     linkList[3].classList.remove("none");
+    titleList[3].classList.add("selected-navigation-button");
+    removeNavigationButtonClass();
     addNoneClass();
   } else if (title == titleList[4]) {
     linkList[4].classList.remove("none");
+    titleList[4].classList.add("selected-navigation-button");
+    removeNavigationButtonClass();
     addNoneClass();
   } else if (title == titleList[5]) {
     linkList[5].classList.remove("none");
+    titleList[5].classList.add("selected-navigation-button");
+    removeNavigationButtonClass();
     addNoneClass();
   }
 }
@@ -214,3 +231,5 @@ function toggleClass(title) {
 for (var i = 0; i < titleList.length; i++) {
   titleList[i].addEventListener("click", toggleClass.bind(null, titleList[i]));
 }
+
+// ------------------search box -------------------------
