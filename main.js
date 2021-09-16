@@ -437,6 +437,28 @@ $('.month-6').click(function () {
     }
 })
 
+$("div[name='week']").click(function () {
+    $("div[name='week']").addClass('flexible-btn-active');
+    $("div[name='weekend']").removeClass('flexible-btn-active');
+    $("div[name='weekend']").addClass('weekends-deactive');
+    $("div[name='month']").removeClass('flexible-btn-active');
+    $("div[name='month']").addClass('weekends-deactive');
+})
+$("div[name='month']").click(function () {
+    $("div[name='month']").addClass('flexible-btn-active');
+    $("div[name='weekend']").removeClass('flexible-btn-active');
+    $("div[name='weekend']").addClass('weekends-deactive');
+    $("div[name='week']").removeClass('flexible-btn-active');
+    $("div[name='week']").addClass('weekends-deactive');
+})
+$("div[name='weekend']").click(function () {
+    $("div[name='weekend']").addClass('flexible-btn-active');
+    $("div[name='week']").removeClass('flexible-btn-active');
+    $("div[name='week']").addClass('weekends-deactive');
+    $("div[name='month']").removeClass('flexible-btn-active');
+    $("div[name='month']").addClass('weekends-deactive');
+})
+
 // Closing clicks
 $(document).click(function (e) {
     if (
