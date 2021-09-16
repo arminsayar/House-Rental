@@ -1150,11 +1150,7 @@ h3 {
   top: 80px;
   left: 0;
   background-color: #fff;
-<<<<<<< HEAD
   height: 410px;
-=======
-  height: calc(50vh);
->>>>>>> 4fcd9ceca93efb59bbbbd9b2763cbbcd7f05b8bc
   width: 850px;
   overflow-y: auto;
   overflow-x: hidden;
