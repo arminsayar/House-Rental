@@ -181,7 +181,7 @@ header > div:nth-child(1) {
   box-shadow: 0px 15px 40px 80px rgba(0, 0, 0, 28%);
 }
 
-.nav-main {
+#nav-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -256,6 +256,7 @@ header > div:nth-child(1) {
 }
 
 #nav-la {
+  margin-right: 8px;
   height: 43px;
   display: flex;
   width: 46px;
@@ -1152,7 +1153,7 @@ h3 {
   top: 80px;
   left: 0;
   background-color: #fff;
-  height: calc(50vh);
+  height: 410px;
   width: 850px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -1217,6 +1218,7 @@ h3 {
   padding: 6px 12px;
   margin: 0 3px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .flexible-main > div:nth-child(3) > DIV:nth-child(1):hover,
@@ -1307,6 +1309,105 @@ h3 {
 }
 
 /* --------------searchbar------------- */
-#nav-logo svg {
+/* #nav-logo svg {
+  color: rgb(255, 56, 92);
+} */
+.nav-main-scroll {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  height: 80px;
+  max-width: 1760px;
+  margin: 5px auto;
+  background-color: rgb(255, 255, 255);
+  margin-top: -5px;
+}
+.nav-tx-scroll {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-family: Circular BOLD; */
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+  border-radius: 22px;
+  width: 127px;
+  height: 42px;
+  font-family: Circular BOOK;
+  color: rgb(34, 34, 34);
+  white-space: nowrap;
+}
+.nav-tx-scroll:hover,
+.nav-la-scroll:hover {
+  background-color: rgba(206, 206, 206, 0.15);
+}
+.profile-btn-scroll {
+  border: 1px solid #dddddd;
+}
+.profile-btn-scroll:hover {
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 18%);
+}
+.logo-scroll {
   color: rgb(255, 56, 92);
 }
+
+.search-box-scroll {
+  padding-left: 8px;
+  margin-top: 8px;
+  display: flex;
+  width: 300px;
+  height: 48px;
+  align-items: center;
+  vertical-align: middle;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 2px rgb(0 0 0 / 8%), 0px 4px 12px rgb(0 0 0 / 5%);
+  border: 1px solid #dddddd;
+  border-radius: 40px;
+  color: #222222;
+}
+.search-box-scroll:hover {
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 18%);
+}
+
+.search-box-text {
+  font-family: Circular BOOK;
+  padding: 0px 16px;
+  font-size: 14px;
+  line-height: 18px;
+  flex: 1 1 auto;
+  min-width: 0px;
+  font-weight: 600;
+  padding: 0 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #222222;
+}
+.search-box-icon {
+  background-color: #ff385c;
+  color: #ffffff;
+  height: 32px;
+  margin: 7px 7px 7px 0;
+  padding: 10px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.nav-la-scroll {
+  margin-right: 8px;
+  height: 43px;
+  display: flex;
+  width: 46px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+}
+
+/* .nav-la-scroll:hover {
+  background-color: rgba(58, 56, 56, 0.15);
+} */
