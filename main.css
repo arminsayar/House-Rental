@@ -181,7 +181,7 @@ header > div:nth-child(1) {
   box-shadow: 0px 15px 40px 80px rgba(0, 0, 0, 28%);
 }
 
-#nav-main {
+.nav-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -358,7 +358,7 @@ header > div:nth-child(1) {
   color: #717171;
 }
 
-#nav-search-main {
+.nav-search-main {
   display: flex;
   align-items: center;
   background-color: #fff;
@@ -527,29 +527,25 @@ header > div:nth-child(1) {
   padding: 16px 0px;
 }
 
-.none {
-  display: none;
-}
-
 /* END SECTION 3 */
 
-#nav-search-main > button:hover {
+.nav-search-main > button:hover {
   background-color: #dddddd;
 }
 
-#nav-search-main > button:nth-child(1) {
+.nav-search-main > button:nth-child(1) {
   padding: 14px 32px;
 }
 
-#nav-search-main > button:nth-child(2) {
+.nav-search-main > button:nth-child(2) {
   padding: 14px 24px;
 }
 
-#nav-search-main > button:nth-child(3) {
+.nav-search-main > button:nth-child(3) {
   padding: 14px 24px;
 }
 
-#nav-search-main > button:nth-child(4) {
+.nav-search-main > button:nth-child(4) {
   padding: 14px 0px 14px 14px;
   max-height: 68px;
   display: flex;
@@ -1216,19 +1212,23 @@ h3 {
   border: 1px solid rgb(176, 176, 176);
   border-radius: 32px;
   padding: 6px 12px;
-  margin: 0 3px;
+  margin: 0 5px;
   cursor: pointer;
   font-size: 14px;
+  color: rgb(34, 34, 34);
 }
-
-.flexible-main > div:nth-child(3) > DIV:nth-child(1):hover,
-.flexible-main > div:nth-child(3) > DIV:nth-child(2):hover,
-.flexible-main > div:nth-child(3) > DIV:nth-child(3):hover {
+.weekends-deactive:hover {
   border: 1px solid rgb(34, 34, 34);
 }
 
 .flexible-btn-active {
-  border: 1px solid rgb(34, 34, 34);
+  border: 2px solid rgb(34, 34, 34);
+}
+
+.flexible-btn-active:hover {
+  color: rgb(0, 0, 0) !important;
+  background-color: rgb(247, 247, 247);
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .flexible-main > div:nth-child(2) > span {
@@ -1283,7 +1283,7 @@ h3 {
 }
 
 .months-list:hover {
-  border: 1px solid #222222;
+  border: 2px solid #222222;
 }
 
 .months-list > div:nth-child(2) {
@@ -1313,7 +1313,8 @@ h3 {
   color: rgb(255, 56, 92);
 } */
 .nav-main-scroll {
-  display: none;
+  z-index: 9999;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 80px;
@@ -1322,6 +1323,21 @@ h3 {
   margin: 5px auto;
   background-color: rgb(255, 255, 255);
   margin-top: -5px;
+}
+.nav-main-scroll::after {
+  box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px;
+  transform-origin: 50% 0%;
+  transition-duration: 150ms;
+  transition-property: opacity, -ms-transform, -webkit-transform, transform;
+  transition-timing-function: ease;
+  content: ""; /* this line effects hovers */
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 0;
+  opacity: 1;
 }
 .nav-tx-scroll {
   height: 43px;
@@ -1411,3 +1427,13 @@ h3 {
 /* .nav-la-scroll:hover {
   background-color: rgba(58, 56, 56, 0.15);
 } */
+.none {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
