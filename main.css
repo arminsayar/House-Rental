@@ -238,6 +238,26 @@ header>div:nth-child(1) {
   transform: scaleX(1);
 }
 
+.nav-li2::before {
+  background-color: currentcolor;
+  border-radius: 1px;
+  content: "";
+  height: 2px;
+  margin-left: 35px;
+  margin-top: 26px;
+  position: absolute;
+  -webkit-transition: 0.2s -webkit-transform cubic-bezier(0, 0, 0.1, 1),
+    0.2s transform cubic-bezier(0, 0, 0.1, 1) !important;
+  -moz-transition: 0.2s transform cubic-bezier(0, 0, 0.1, 1);
+  transition: 0.2s -ms-transform cubic-bezier(0, 0, 0.1, 1),
+    0.2s -webkit-transform cubic-bezier(0, 0, 0.1, 1),
+    0.2s transform cubic-bezier(0, 0, 0.1, 1) !important;
+  width: 18px;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 #nav-pannel {
   display: flex;
   align-items: center;
@@ -304,6 +324,20 @@ header>div:nth-child(1) {
     0.2s -webkit-transform cubic-bezier(0, 0, 0.1, 1),
     0.2s transform cubic-bezier(0, 0, 0.1, 1);
 }
+.nav-link-hover1::before {
+  background-color: currentcolor;
+  border-radius: 1px;
+  content: "";
+  height: 2px;
+  margin-left: 45px;
+  margin-top: 26px;
+  position: absolute;
+  width: 5px;
+  transform: scale(0);
+  transition: 0.2s -ms-transform cubic-bezier(0, 0, 0.1, 1),
+    0.2s -webkit-transform cubic-bezier(0, 0, 0.1, 1),
+    0.2s transform cubic-bezier(0, 0, 0.1, 1);
+}
 
 .nav-link-hover2::before {
   background-color: currentcolor;
@@ -321,7 +355,8 @@ header>div:nth-child(1) {
 }
 
 .nav-link-hover:hover::before,
-.nav-link-hover2:hover::before {
+.nav-link-hover2:hover::before, 
+.nav-link-hover1:hover::before {
   transform: scaleX(1);
   display: block;
 }
@@ -359,6 +394,7 @@ header>div:nth-child(1) {
 
 #nav-search-main {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #fff;
   max-width: 850px;
@@ -546,7 +582,7 @@ header>div:nth-child(1) {
   padding: 14px 24px;
 }
 
-#nav-search-main>button:nth-child(4) {
+.btn-before4 {
   padding: 14px 0px 14px 14px;
   max-height: 68px;
   display: flex;
@@ -562,6 +598,19 @@ header>div:nth-child(1) {
   height: 32px !important;
   margin-top: 3px !important;
   margin-left: 240px;
+  position: absolute !important;
+  z-index: 0 !important;
+  border-left: 0px !important;
+}
+
+.btn-before-active::before {
+  border-width: 0 1px !important;
+  border-style: solid !important;
+  border-color: #dddddd;
+  content: "" !important;
+  height: 32px !important;
+  margin-top: 3px !important;
+  margin-left: 385px;
   position: absolute !important;
   z-index: 0 !important;
   border-left: 0px !important;
@@ -603,6 +652,18 @@ header>div:nth-child(1) {
 
 .btn-before3:hover::before {
   display: none;
+}
+
+.exp-active {
+  width: 280px;
+}
+
+.exp-1-active {
+  width: 500px;
+}
+
+.exp-main-active {
+  padding-right: 8px;
 }
 
 #li-after1 {
@@ -1216,6 +1277,7 @@ h3 {
   font-size: 14px;
   color: rgb(34, 34, 34);
 }
+
 .weekends-deactive:hover {
   border: 1px solid rgb(34, 34, 34);
 }
