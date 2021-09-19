@@ -691,6 +691,8 @@ $(window).scroll(function () {
     $(".nav-main-scroll").removeClass("none").addClass("fixed");
     $(".nav-main").addClass("none");
     $(".nav-search-main").addClass("none");
+    $(".nav-texts-scroll").addClass("none");
+    $(".search-box-scroll").removeClass("none");
   } else {
     $(".nav-main-scroll").addClass("none").removeClass("fixed");
     $(".nav-main").removeClass("none");
@@ -699,8 +701,8 @@ $(window).scroll(function () {
 });
 
 // ADDING EVENT LISTENER FOR THE INPUT
-// $(".search-box-scroll").click(function () {
-//   // $(".nav-main-scroll").addClass("none").removeClass("fixed");
-//   $(".nav-main").removeClass("none");
-//   $(".nav-search-main").removeClass("none");
-// });
+$(".search-box-scroll").click(function () {
+  // $(".nav-main-scroll").addClass("none").removeClass("fixed");
+  $(".nav-texts-scroll").removeClass("none");
+  $(".search-box-scroll").addClass("none");
+});

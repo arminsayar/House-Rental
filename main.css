@@ -1308,10 +1308,8 @@ h3 {
   display: none;
 }
 
-/* --------------searchbar------------- */
-/* #nav-logo svg {
-  color: rgb(255, 56, 92);
-} */
+/* --------------SEARCHBAR------------- */
+
 .nav-main-scroll {
   z-index: 9999;
   display: flex;
@@ -1324,13 +1322,13 @@ h3 {
   background-color: rgb(255, 255, 255);
   margin-top: -5px;
 }
-.nav-main-scroll::after {
+/* .nav-main-scroll::after {
   box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px;
   transform-origin: 50% 0%;
   transition-duration: 150ms;
   transition-property: opacity, -ms-transform, -webkit-transform, transform;
   transition-timing-function: ease;
-  content: ""; /* this line effects hovers */
+  content: ""; this line effects hovers
   height: 100%;
   left: 0px;
   position: absolute;
@@ -1338,7 +1336,7 @@ h3 {
   width: 100%;
   z-index: 0;
   opacity: 1;
-}
+} */
 .nav-tx-scroll {
   height: 43px;
   display: flex;
@@ -1383,6 +1381,7 @@ h3 {
   border: 1px solid #dddddd;
   border-radius: 40px;
   color: #222222;
+  cursor: pointer;
 }
 .search-box-scroll:hover {
   box-shadow: 0px 2px 4px rgb(0 0 0 / 18%);
@@ -1423,10 +1422,21 @@ h3 {
   justify-content: center;
   border-radius: 22px;
 }
-
+.nav-texts-scroll {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  display: flex;
+  position: relative;
+}
 /* .nav-la-scroll:hover {
   background-color: rgba(58, 56, 56, 0.15);
 } */
+.nav-logo {
+  width: 227.45px;
+  cursor: pointer;
+}
+/* GENERAL CLASSES */
 .none {
   display: none;
 }
