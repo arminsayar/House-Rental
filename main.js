@@ -66,517 +66,444 @@ $(".btn-before2, .btn-before3").click(function () {
 
 // I'm flexible
 
-$(".month-1").click(function () {
-  if (
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='September']").removeClass("months-deactive");
-    $(".month-1").addClass("months-list-main-active");
-  } else {
-    $("span[name='September']").toggleClass("months-deactive");
-    $(".month-1").toggleClass("months-list-main-active");
-  }
-  if ($(".month-1").hasClass("months-list-main-active")) {
-    $(".months-img1").attr(
-      "src",
-      "https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg"
-    );
-  } else {
-    $(".months-img1").attr(
-      "src",
-      "https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg"
-    );
-  }
-  if (
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-    $("span[name='v4']").addClass("months-deactive");
-    $("span[name='v3']").addClass("months-deactive");
-    $("span[name='v2']").addClass("months-deactive");
-    $("span[name='v1']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive")
-  ) {
-    $("span[name='v3']").addClass("months-deactive");
-  }
-  if (
-    !$("span[name='September]").hasClass("months-deactive") &&
-    !$("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").removeClass("months-deactive");
-  }
-  if (
-    !$("span[name='September']").hasClass("months-deactive") &&
-    !$("span[name='January']").hasClass("months-deactive")
-  ) {
-    $("span[name='v4']").removeClass("months-deactive");
-  }
-  if (
-    !$("span[name='September']").hasClass("months-deactive") &&
-    !$("span[name='December']").hasClass("months-deactive")
-  ) {
-    $("span[name='v3']").removeClass("months-deactive");
-  }
-  if (
-    !$("span[name='September']").hasClass("months-deactive") &&
-    !$("span[name='November']").hasClass("months-deactive")
-  ) {
-    $("span[name='v2']").removeClass("months-deactive");
-  }
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    !$("span[name='November']").hasClass("months-deactive")
-  ) {
-    $("span[name='v2']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    !$("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive")
-  ) {
-    $("span[name='v4']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    !$("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-  }
-  if (
-    !$("span[name='September']").hasClass("months-deactive") &&
-    !$("span[name='October']").hasClass("months-deactive")
-  ) {
-    $("span[name='v1']").removeClass("months-deactive");
-  }
-  if ($("span[name='September']").hasClass("months-deactive")) {
-    $("span[name='v1']").addClass("months-deactive");
-  }
-});
-$(".month-2").click(function () {
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='October']").removeClass("months-deactive");
-    $(".month-2").addClass("months-list-main-active");
-    $("span[name='v2']").addClass("months-deactive");
-  } else {
-    $("span[name='October']").toggleClass("months-deactive");
-    $(".month-2").toggleClass("months-list-main-active");
-  }
-  if ($(".month-2").hasClass("months-list-main-active")) {
-    $(".months-img2").attr(
-      "src",
-      "https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg"
-    );
-  } else {
-    $(".months-img2").attr(
-      "src",
-      "https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg"
-    );
-  }
-  if (!$("span[name='September']").hasClass("months-deactive")) {
-    $("span[name='v1']").removeClass("months-deactive");
-  }
-  if ($("span[name='October']").hasClass("months-deactive")) {
-    $("span[name='v1']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-    $("span[name='v4']").addClass("months-deactive");
-    $("span[name='v3']").addClass("months-deactive");
-    $("span[name='v2']").addClass("months-deactive");
-  }
-  if (
-    !$("span[name='October]").hasClass("months-deactive") &&
-    !$("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").removeClass("months-deactive");
-  }
-  if (
-    !$("span[name='October']").hasClass("months-deactive") &&
-    !$("span[name='January']").hasClass("months-deactive")
-  ) {
-    $("span[name='v4']").removeClass("months-deactive");
-  }
-  if (
-    !$("span[name='October']").hasClass("months-deactive") &&
-    !$("span[name='December']").hasClass("months-deactive")
-  ) {
-    $("span[name='v3']").removeClass("months-deactive");
-  }
-  if (
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    !$("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v3']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='October']").hasClass("months-deactive") &&
-    !$("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v4']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    !$("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-  }
-  if (
-    !$("span[name='October']").hasClass("months-deactive") &&
-    !$("span[name='November']").hasClass("months-deactive")
-  ) {
-    $("span[name='v2']").removeClass("months-deactive");
-  }
-  if (
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v2']").addClass("months-deactive");
-  }
-});
-$(".month-3").click(function () {
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='November']").removeClass("months-deactive");
-    $(".month-3").addClass("months-list-main-active");
-    $("span[name='v2']").addClass("months-deactive");
-  } else {
-    $("span[name='November']").toggleClass("months-deactive");
-    $(".month-3").toggleClass("months-list-main-active");
-  }
-  if ($(".month-3").hasClass("months-list-main-active")) {
-    $(".months-img3").attr(
-      "src",
-      "https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg"
-    );
-  } else {
-    $(".months-img3").attr(
-      "src",
-      "https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg"
-    );
-  }
-  if (
-    !$("span[name='September']").hasClass("months-deactive") ||
-    !$("span[name='October']").hasClass("months-deactive")
-  ) {
-    $("span[name='v2']").removeClass("months-deactive");
-  }
-  if (
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    !$("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v2']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='November']").hasClass("months-deactive") &&
-    !$("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v4']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    !$("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    !$("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v2']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-    $("span[name='v4']").addClass("months-deactive");
-    $("span[name='v3']").addClass("months-deactive");
-  }
-  if (
-    !$("span[name='November']").hasClass("months-deactive") &&
-    !$("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").removeClass("months-deactive");
-  }
-  if (
-    !$("span[name='November']").hasClass("months-deactive") &&
-    !$("span[name='January']").hasClass("months-deactive")
-  ) {
-    $("span[name='v4']").removeClass("months-deactive");
-  }
-  if (
-    $("span[name='November']").hasClass("months-deactive") &&
-    !$("span[name='December']").hasClass("months-deactive")
-  ) {
-    $("span[name='v3']").addClass("months-deactive");
-  }
-  if (
-    !$("span[name='November']").hasClass("months-deactive") &&
-    !$("span[name='December']").hasClass("months-deactive")
-  ) {
-    $("span[name='v3']").removeClass("months-deactive");
-  }
-});
-$(".month-4").click(function () {
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='December']").removeClass("months-deactive");
-    $(".month-4").addClass("months-list-main-active");
-    $("span[name='v3']").addClass("months-deactive");
-  } else {
-    $("span[name='December']").toggleClass("months-deactive");
-    $(".month-4").toggleClass("months-list-main-active");
-  }
-  if ($(".month-4").hasClass("months-list-main-active")) {
-    $(".months-img4").attr(
-      "src",
-      "https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg"
-    );
-  } else {
-    $(".months-img4").attr(
-      "src",
-      "https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg"
-    );
-  }
-  if (
-    !$("span[name='September']").hasClass("months-deactive") ||
-    !$("span[name='November']").hasClass("months-deactive") ||
-    !$("span[name='October']").hasClass("months-deactive")
-  ) {
-    $("span[name='v3']").removeClass("months-deactive");
-  }
-  if ($("span[name='December']").hasClass("months-deactive")) {
-    $("span[name='v3']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-    $("span[name='v4']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive") &&
-    !$("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive")
-  ) {
-    $("span[name='v4']").addClass("months-deactive");
-  }
-  if (
-    !$("span[name='December']").hasClass("months-deactive") &&
-    !$("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").removeClass("months-deactive");
-  }
-  if (
-    !$("span[name='December']").hasClass("months-deactive") &&
-    !$("span[name='January']").hasClass("months-deactive")
-  ) {
-    $("span[name='v4']").removeClass("months-deactive");
-  }
-});
-$(".month-5").click(function () {
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='February']").hasClass("months-deactive")
-  ) {
-    $("span[name='January']").removeClass("months-deactive");
-    $(".month-5").addClass("months-list-main-active");
-    $("span[name='v4']").addClass("months-deactive");
-  } else {
-    $("span[name='January']").toggleClass("months-deactive");
-    $(".month-5").toggleClass("months-list-main-active");
-  }
-  if ($(".month-5").hasClass("months-list-main-active")) {
-    $(".months-img5").attr(
-      "src",
-      "https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg"
-    );
-  } else {
-    $(".months-img5").attr(
-      "src",
-      "https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg"
-    );
-  }
-  if (
-    !$("span[name='September']").hasClass("months-deactive") ||
-    !$("span[name='December']").hasClass("months-deactive") ||
-    !$("span[name='November']").hasClass("months-deactive") ||
-    !$("span[name='October']").hasClass("months-deactive")
-  ) {
-    $("span[name='v4']").removeClass("months-deactive");
-  }
-  if ($("span[name='January']").hasClass("months-deactive")) {
-    $("span[name='v4']").addClass("months-deactive");
-  }
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-  }
-  if (!$("span[name='February']").hasClass("months-deactive")) {
-    $("span[name='v5']").removeClass("months-deactive");
-  }
-  if (
-    $("span[name='January']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    !$("span[name='February']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='September']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").addClass("months-deactive");
-  }
-});
-$(".month-6").click(function () {
-  if (
-    $("span[name='September']").hasClass("months-deactive") &&
-    $("span[name='December']").hasClass("months-deactive") &&
-    $("span[name='November']").hasClass("months-deactive") &&
-    $("span[name='October']").hasClass("months-deactive") &&
-    $("span[name='January']").hasClass("months-deactive")
-  ) {
-    $("span[name='February']").removeClass("months-deactive");
-    $(".month-6").addClass("months-list-main-active");
-    $("span[name='v5']").addClass("months-deactive");
-  } else {
-    $("span[name='February']").toggleClass("months-deactive");
-    $(".month-6").toggleClass("months-list-main-active");
-  }
-  if ($(".month-6").hasClass("months-list-main-active")) {
-    $(".months-img6").attr(
-      "src",
-      "https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg"
-    );
-  } else {
-    $(".months-img6").attr(
-      "src",
-      "https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg"
-    );
-  }
-  if (
-    !$("span[name='September']").hasClass("months-deactive") ||
-    !$("span[name='December']").hasClass("months-deactive") ||
-    !$("span[name='November']").hasClass("months-deactive") ||
-    !$("span[name='October']").hasClass("months-deactive") ||
-    !$("span[name='January']").hasClass("months-deactive")
-  ) {
-    $("span[name='v5']").removeClass("months-deactive");
-  }
-  if ($("span[name='February']").hasClass("months-deactive")) {
-    $("span[name='v5']").addClass("months-deactive");
-  }
-});
+$('.month-1').click(function () {
+    if (
+        $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='September']").removeClass('months-deactive');
+        $('.month-1').addClass('months-list-main-active');
+    } else {
+        $("span[name='September']").toggleClass('months-deactive');
+        $('.month-1').toggleClass('months-list-main-active');
+    }
+    if ($('.month-1').hasClass('months-list-main-active')) {
+        $('.months-img1').attr(
+            'src', 'https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg')
+    } else {
+        $('.months-img1').attr(
+            'src', 'https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg')
+    }
+    if ($("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+        $("span[name='v4']").addClass('months-deactive');
+        $("span[name='v3']").addClass('months-deactive');
+        $("span[name='v2']").addClass('months-deactive');
+        $("span[name='v1']").addClass('months-deactive');
+    }
+    if ($("span[name='September']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')) {
+        $("span[name='v3']").addClass('months-deactive');
+    }
+    if (!$("span[name='September]").hasClass('months-deactive')
+        && !$("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='v5']").removeClass('months-deactive');
+    }
+    if (!$("span[name='September']").hasClass('months-deactive')
+        && !$("span[name='January']").hasClass('months-deactive')) {
+        $("span[name='v4']").removeClass('months-deactive');
+    }
+    if (!$("span[name='September']").hasClass('months-deactive')
+        && !$("span[name='December']").hasClass('months-deactive')) {
+        $("span[name='v3']").removeClass('months-deactive');
+    }
+    if (!$("span[name='September']").hasClass('months-deactive')
+        && !$("span[name='November']").hasClass('months-deactive')) {
+        $("span[name='v2']").removeClass('months-deactive');
+    }
+    if ($("span[name='September']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && !$("span[name='November']").hasClass('months-deactive')) {
+        $("span[name='v2']").addClass('months-deactive');
+    }
+    if ($("span[name='September']").hasClass('months-deactive')
+        && !$("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')) {
+        $("span[name='v4']").addClass('months-deactive');
+    }
+    if ($("span[name='September']").hasClass('months-deactive')
+        && !$("span[name='February']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+    }
+    if (!$("span[name='September']").hasClass('months-deactive')
+        && !$("span[name='October']").hasClass('months-deactive')) {
+        $("span[name='v1']").removeClass('months-deactive');
+    }
+    if ($("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v1']").addClass('months-deactive');
+    }
+})
+$('.month-2').click(function () {
+    if (
+        $("span[name='September']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='October']").removeClass('months-deactive');
+        $('.month-2').addClass('months-list-main-active');
+        $("span[name='v2']").addClass('months-deactive');
+    } else {
+        $("span[name='October']").toggleClass('months-deactive');
+        $('.month-2').toggleClass('months-list-main-active');
+    }
+    if ($('.month-2').hasClass('months-list-main-active')) {
+        $('.months-img2').attr(
+            'src', 'https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg')
+    } else {
+        $('.months-img2').attr(
+            'src', 'https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg')
+    }
+    if (!$("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v1']").removeClass('months-deactive');
+    }
+    if ($("span[name='October']").hasClass('months-deactive')) {
+        $("span[name='v1']").addClass('months-deactive');
+    }
+    if ($("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+        $("span[name='v4']").addClass('months-deactive');
+        $("span[name='v3']").addClass('months-deactive');
+        $("span[name='v2']").addClass('months-deactive');
+    }
+    if (!$("span[name='October]").hasClass('months-deactive')
+        && !$("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='v5']").removeClass('months-deactive');
+    }
+    if (!$("span[name='October']").hasClass('months-deactive')
+        && !$("span[name='January']").hasClass('months-deactive')) {
+        $("span[name='v4']").removeClass('months-deactive');
+    }
+    if (!$("span[name='October']").hasClass('months-deactive')
+        && !$("span[name='December']").hasClass('months-deactive')) {
+        $("span[name='v3']").removeClass('months-deactive');
+    }
+    if ($("span[name='October']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && !$("span[name='December']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v3']").addClass('months-deactive');
+    }
+    if ($("span[name='October']").hasClass('months-deactive')
+        && !$("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v4']").addClass('months-deactive');
+    }
+    if ($("span[name='October']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && !$("span[name='February']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+    }
+    if (!$("span[name='October']").hasClass('months-deactive')
+        && !$("span[name='November']").hasClass('months-deactive')) {
+        $("span[name='v2']").removeClass('months-deactive');
+    }
+    if ($("span[name='October']").hasClass('months-deactive')
+        && $("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v2']").addClass('months-deactive');
+    }
+})
+$('.month-3').click(function () {
+    if (
+        $("span[name='September']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='November']").removeClass('months-deactive');
+        $('.month-3').addClass('months-list-main-active');
+        $("span[name='v2']").addClass('months-deactive');
+    } else {
+        $("span[name='November']").toggleClass('months-deactive');
+        $('.month-3').toggleClass('months-list-main-active');
+    }
+    if ($('.month-3').hasClass('months-list-main-active')) {
+        $('.months-img3').attr(
+            'src', 'https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg')
+    } else {
+        $('.months-img3').attr(
+            'src', 'https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg')
+    }
+    if (!$("span[name='September']").hasClass('months-deactive')
+        || !$("span[name='October']").hasClass('months-deactive')) {
+        $("span[name='v2']").removeClass('months-deactive');
+    }
+    if ($("span[name='November']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && !$("span[name='October']").hasClass('months-deactive')
+        && $("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v2']").addClass('months-deactive');
+    }
+    if ($("span[name='November']").hasClass('months-deactive')
+        && !$("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v4']").addClass('months-deactive');
+    }
+    if ($("span[name='November']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && !$("span[name='February']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+    }
+    if ($("span[name='November']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && !$("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v2']").addClass('months-deactive');
+    }
+    if ($("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+        $("span[name='v4']").addClass('months-deactive');
+        $("span[name='v3']").addClass('months-deactive');
+    }
+    if (!$("span[name='November']").hasClass('months-deactive')
+        && !$("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='v5']").removeClass('months-deactive');
+    }
+    if (!$("span[name='November']").hasClass('months-deactive')
+        && !$("span[name='January']").hasClass('months-deactive')) {
+        $("span[name='v4']").removeClass('months-deactive');
+    }
+    if ($("span[name='November']").hasClass('months-deactive')
+        && !$("span[name='December']").hasClass('months-deactive')) {
+        $("span[name='v3']").addClass('months-deactive');
+    }
+    if (!$("span[name='November']").hasClass('months-deactive')
+        && !$("span[name='December']").hasClass('months-deactive')) {
+        $("span[name='v3']").removeClass('months-deactive');
+    }
+})
+$('.month-4').click(function () {
+    if (
+        $("span[name='September']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='December']").removeClass('months-deactive');
+        $('.month-4').addClass('months-list-main-active');
+        $("span[name='v3']").addClass('months-deactive');
+    } else {
+        $("span[name='December']").toggleClass('months-deactive');
+        $('.month-4').toggleClass('months-list-main-active');
+    }
+    if ($('.month-4').hasClass('months-list-main-active')) {
+        $('.months-img4').attr(
+            'src', 'https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg')
+    } else {
+        $('.months-img4').attr(
+            'src', 'https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg')
+    }
+    if (!$("span[name='September']").hasClass('months-deactive')
+        || !$("span[name='November']").hasClass('months-deactive')
+        || !$("span[name='October']").hasClass('months-deactive')) {
+        $("span[name='v3']").removeClass('months-deactive');
+    }
+    if ($("span[name='December']").hasClass('months-deactive')) {
+        $("span[name='v3']").addClass('months-deactive');
+    }
+    if ($("span[name='January']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+        $("span[name='v4']").addClass('months-deactive');
+    }
+    if ($("span[name='December']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')
+        && !$("span[name='February']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+    }
+    if ($("span[name='September']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')) {
+        $("span[name='v4']").addClass('months-deactive');
+    }
+    if (!$("span[name='December']").hasClass('months-deactive')
+        && !$("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='v5']").removeClass('months-deactive');
+    }
+    if (!$("span[name='December']").hasClass('months-deactive')
+        && !$("span[name='January']").hasClass('months-deactive')) {
+        $("span[name='v4']").removeClass('months-deactive');
+    }
+})
+$('.month-5').click(function () {
+    if (
+        $("span[name='September']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='January']").removeClass('months-deactive');
+        $('.month-5').addClass('months-list-main-active');
+        $("span[name='v4']").addClass('months-deactive');
+
+    } else {
+        $("span[name='January']").toggleClass('months-deactive');
+        $('.month-5').toggleClass('months-list-main-active');
+    }
+    if ($('.month-5').hasClass('months-list-main-active')) {
+        $('.months-img5').attr(
+            'src', 'https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg')
+    } else {
+        $('.months-img5').attr(
+            'src', 'https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg')
+    }
+    if (!$("span[name='September']").hasClass('months-deactive')
+        || !$("span[name='December']").hasClass('months-deactive')
+        || !$("span[name='November']").hasClass('months-deactive')
+        || !$("span[name='October']").hasClass('months-deactive')) {
+        $("span[name='v4']").removeClass('months-deactive');
+    }
+    if ($("span[name='January']").hasClass('months-deactive')) {
+        $("span[name='v4']").addClass('months-deactive');
+    }
+    if ($("span[name='September']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+    }
+    if (!$("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='v5']").removeClass('months-deactive');
+    }
+    if ($("span[name='January']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && !$("span[name='February']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='September']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+    }
+})
+$('.month-6').click(function () {
+    if (
+        $("span[name='September']").hasClass('months-deactive')
+        && $("span[name='December']").hasClass('months-deactive')
+        && $("span[name='November']").hasClass('months-deactive')
+        && $("span[name='October']").hasClass('months-deactive')
+        && $("span[name='January']").hasClass('months-deactive')) {
+        $("span[name='February']").removeClass('months-deactive');
+        $('.month-6').addClass('months-list-main-active');
+        $("span[name='v5']").addClass('months-deactive');
+    } else {
+        $("span[name='February']").toggleClass('months-deactive');
+        $('.month-6').toggleClass('months-list-main-active');
+    }
+    if ($('.month-6').hasClass('months-list-main-active')) {
+        $('.months-img6').attr(
+            'src', 'https://a0.muscache.com/pictures/33e22c88-92bf-47be-847a-98a7e374d78b.jpg')
+    } else {
+        $('.months-img6').attr(
+            'src', 'https://a0.muscache.com/pictures/cf82c9bc-520a-4486-9be4-1f0927972381.jpg')
+    }
+    if (!$("span[name='September']").hasClass('months-deactive')
+        || !$("span[name='December']").hasClass('months-deactive')
+        || !$("span[name='November']").hasClass('months-deactive')
+        || !$("span[name='October']").hasClass('months-deactive')
+        || !$("span[name='January']").hasClass('months-deactive')) {
+        $("span[name='v5']").removeClass('months-deactive');
+    }
+    if ($("span[name='February']").hasClass('months-deactive')) {
+        $("span[name='v5']").addClass('months-deactive');
+    }
+})
 
 $("div[name='week']").click(function () {
-  $("div[name='week']").addClass("flexible-btn-active");
-  $("div[name='weekend']").removeClass("flexible-btn-active");
-  $("div[name='weekend']").addClass("weekends-deactive");
-  $("div[name='month']").removeClass("flexible-btn-active");
-  $("div[name='month']").addClass("weekends-deactive");
-});
+    $("div[name='week']").addClass('flexible-btn-active');
+    $("div[name='weekend']").removeClass('flexible-btn-active');
+    $("div[name='weekend']").addClass('weekends-deactive');
+    $("div[name='month']").removeClass('flexible-btn-active');
+    $("div[name='month']").addClass('weekends-deactive');
+    $("span[name='btn-names']").text('week');
+})
 $("div[name='month']").click(function () {
-  $("div[name='month']").addClass("flexible-btn-active");
-  $("div[name='weekend']").removeClass("flexible-btn-active");
-  $("div[name='weekend']").addClass("weekends-deactive");
-  $("div[name='week']").removeClass("flexible-btn-active");
-  $("div[name='week']").addClass("weekends-deactive");
-});
+    $("div[name='month']").addClass('flexible-btn-active');
+    $("div[name='weekend']").removeClass('flexible-btn-active');
+    $("div[name='weekend']").addClass('weekends-deactive');
+    $("div[name='week']").removeClass('flexible-btn-active');
+    $("div[name='week']").addClass('weekends-deactive');
+    $("span[name='btn-names']").text('month');
+})
 $("div[name='weekend']").click(function () {
-  $("div[name='weekend']").addClass("flexible-btn-active");
-  $("div[name='week']").removeClass("flexible-btn-active");
-  $("div[name='week']").addClass("weekends-deactive");
-  $("div[name='month']").removeClass("flexible-btn-active");
-  $("div[name='month']").addClass("weekends-deactive");
-});
+    $("div[name='weekend']").addClass('flexible-btn-active');
+    $("div[name='week']").removeClass('flexible-btn-active');
+    $("div[name='week']").addClass('weekends-deactive');
+    $("div[name='month']").removeClass('flexible-btn-active');
+    $("div[name='month']").addClass('weekends-deactive');
+    $("span[name='btn-names']").text('weekend');
+})
+
+$("div[name='expriences']").click(function () {
+    $('.btn-before2').css('display', 'none');
+    $('.btn-before3').css('display', 'none');
+    $('.nav-li1').addClass('nav-link-hover1');
+    $('.nav-li1').removeClass('nav-li1');
+    $("div[name='btn4-title']").addClass('exp-active');
+    $("div[name='expriences']").addClass('nav-li2');
+    $("div[name='expriences']").removeClass('nav-link-hover');
+    $("div[name='btn4-title']").html(
+        'Date<br><span class="nss-s sp1">Add when you want to go</span>'
+    )
+    $(".btn-before").addClass('btn-before-active');
+    $(".btn-before").addClass('exp-1-active');
+    $(".btn-before4").addClass('exp-main-active');
+})
+$("div[name='places-to-stay']").click(function () {
+    $('.btn-before2').css('display', 'block');
+    $('.btn-before3').css('display', 'block');
+    $("div[name='places-to-stay']").removeClass('nav-link-hover1');
+    $("div[name='places-to-stay']").addClass('nav-li1');
+    $("div[name='btn4-title']").removeClass('exp-active');
+    $("div[name='expriences']").removeClass('nav-li2');
+    $("div[name='expriences']").addClass('nav-link-hover');
+    $("div[name='btn4-title']").html(
+        'Guests<br><span class="nss-s sp1">Add guests</span>'
+    )
+    $(".btn-before").removeClass('btn-before-active');
+    $(".btn-before").removeClass('exp-1-active');
+    $(".btn-before4").removeClass('exp-main-active');
+})
 
 // Closing clicks
 $(document).click(function (e) {
