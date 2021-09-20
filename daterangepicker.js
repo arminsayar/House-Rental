@@ -32,7 +32,7 @@
     var DateRangePicker = function (element, options, cb) {
 
         //default settings for options
-        this.parentEl = 'body';
+        this.parentEl = $('.flexible-main');
         this.element = $(element);
         this.startDate = moment().startOf('day');
         this.endDate = moment().endOf('day');

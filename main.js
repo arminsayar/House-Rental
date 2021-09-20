@@ -65,6 +65,8 @@ $("svg[name='closebtn-l']").click(function () {
 
 $(".btn-before2, .btn-before3").click(function () {
     $(".flexible-main").toggleClass("flexible-menu-on");
+    $("div[name='calendar-btn']").addClass('flexible-active');
+    $("div[name='imflexible-btn']").removeClass('flexible-active');
     $(".nav-menu-js").hasClass("dis-bl")
         ? $(".nav-menu-js").removeClass("dis-bl")
         : null;
@@ -73,6 +75,9 @@ $(".btn-before2, .btn-before3").click(function () {
         : null;
 
 });
+$(".flexible-active").click(function () {
+    $(".flexible-open").removeClass("none")
+})
 
 // I'm flexible
 
@@ -653,14 +658,4 @@ $(window).scroll(function () {
 
 // Calendar
 
-$('input[name="dates"]').daterangepicker();
-$('#demo').daterangepicker({
-    "autoApply": true,
-    "parentEl": "body",
-    "startDate": "09/15/2021",
-    "endDate": "09/20/2021",
-    "opens": "center"
-}, function (start, end, label) {
-    console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-});
-
+$('.btn-before2, .btn-before3, .calendar-btniv[name="calendar-btn"]').daterangepicker();
