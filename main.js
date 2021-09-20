@@ -3,65 +3,75 @@
 // Profile menu
 
 $("#profile-btn").click(function () {
-  $(".nav-menu-js").toggleClass("dis-bl");
-  $(".location-js").hasClass("dis-bl")
-    ? $(".location-js").removeClass("dis-bl")
-    : null;
-  $(".flexible-main").hasClass("flexible-menu-on")
-    ? $(".flexible-main").removeClass("flexible-menu-on")
-    : null;
+    $(".nav-menu-js").toggleClass("dis-bl");
+    $(".location-js").hasClass("dis-bl")
+        ? $(".location-js").removeClass("dis-bl")
+        : null;
+    $(".flexible-main").hasClass("flexible-menu-on")
+        ? $(".flexible-main").removeClass("flexible-menu-on")
+        : null;
 });
 
 // Location
 
 $(".btn-before").click(function () {
-  $(".location-js").toggleClass("dis-bl");
-  $(".nav-menu-js").hasClass("dis-bl")
-    ? $(".nav-menu-js").removeClass("dis-bl")
-    : null;
-  $(".flexible-main").hasClass("flexible-menu-on")
-    ? $(".flexible-main").removeClass("flexible-menu-on")
-    : null;
+    $(".location-js").toggleClass("dis-bl");
+    $(".btn-before").toggleClass("btn-active");
+    $(".nav-search-main").toggleClass("btn-main-active");
+    $(".nav-menu-js").hasClass("dis-bl")
+        ? $(".nav-menu-js").removeClass("dis-bl")
+        : null;
+    $(".flexible-main").hasClass("flexible-menu-on")
+        ? $(".flexible-main").removeClass("flexible-menu-on")
+        : null;
+    if ($('.location-js').hasClass('dis-bl')) {
+        $(".btn-before").addClass("btn-active")
+        $(".nav-search-main").addClass("btn-main-active")
+    } else {
+        $(".btn-before").removeClass("btn-active")
+        $(".nav-search-main").removeClass("btn-main-active")
+    }
 });
 
 // Price list
 
 $("button[name='pricelist']").click(function () {
-  $(".price-list").toggleClass("price-list-on");
-  $(".price-list").hasClass("price-list-on")
-    ? $("body").css("overflow-y", "hidden")
-    : null;
+    $(".price-list").toggleClass("price-list-on");
+    $(".price-list").hasClass("price-list-on")
+        ? $("body").css("overflow-y", "hidden")
+        : null;
 });
 
 $("svg[name='closebtn-p']").click(function () {
-  $(".price-list").toggleClass("price-list-on");
-  $("body").css("overflow-y", "auto");
+    $(".price-list").toggleClass("price-list-on");
+    $("body").css("overflow-y", "auto");
 });
 
 // Lang list
 
 $("button[name='langlist']").click(function () {
-  $(".lang-list").toggleClass("lang-list-on");
-  $(".lang-list").hasClass("lang-list-on")
-    ? $("body").css("overflow-y", "hidden")
-    : null;
+    $(".lang-list").toggleClass("lang-list-on");
+    $(".lang-list").hasClass("lang-list-on")
+        ? $("body").css("overflow-y", "hidden")
+        : null;
 });
 
 $("svg[name='closebtn-l']").click(function () {
-  $(".lang-list").toggleClass("lang-list-on");
-  $("body").css("overflow-y", "auto");
+    $(".lang-list").toggleClass("lang-list-on");
+    $("body").css("overflow-y", "auto");
 });
 
 // Flexible menu
 
 $(".btn-before2, .btn-before3").click(function () {
-  $(".flexible-main").toggleClass("flexible-menu-on");
-  $(".nav-menu-js").hasClass("dis-bl")
-    ? $(".nav-menu-js").removeClass("dis-bl")
-    : null;
-  $(".location-js").hasClass("dis-bl")
-    ? $(".location-js").removeClass("dis-bl")
-    : null;
+    $(".flexible-main").toggleClass("flexible-menu-on");
+    $(".nav-menu-js").hasClass("dis-bl")
+        ? $(".nav-menu-js").removeClass("dis-bl")
+        : null;
+    $(".location-js").hasClass("dis-bl")
+        ? $(".location-js").removeClass("dis-bl")
+        : null;
+
 });
 
 // I'm flexible
@@ -474,6 +484,8 @@ $("div[name='weekend']").click(function () {
     $("span[name='btn-names']").text('weekend');
 })
 
+// Expriences
+
 $("div[name='expriences']").click(function () {
     $('.btn-before2').css('display', 'none');
     $('.btn-before3').css('display', 'none');
@@ -507,28 +519,35 @@ $("div[name='places-to-stay']").click(function () {
 
 // Closing clicks
 $(document).click(function (e) {
-  if (
-    !$(e.target).closest("#profile-btn").length &&
-    !$(e.target).closest(".btn-before").length &&
-    !$(e.target).closest(".btn-before2").length &&
-    !$(e.target).closest(".btn-before3").length &&
-    !$(e.target).closest(".flexible-main").length &&
-    !$(e.target).closest(".location-js").length &&
-    !$(e.target).closest(".price-list").length &&
-    !$(e.target).closest("button[name='pricelist']").length &&
-    !$(e.target).closest("button[name='langlist']").length
-  ) {
-    $(".nav-menu-js").removeClass("dis-bl");
-    $(".location-js").removeClass("dis-bl");
-    $(".price-list").removeClass("price-list-on");
-    $(".lang-list").removeClass("lang-list-on");
-    $("body").css("overflow-y", "auto");
-    $(".flexible-main").removeClass("flexible-menu-on");
-  }
+    if (
+        !$(e.target).closest("#profile-btn").length &&
+        !$(e.target).closest(".btn-before").length &&
+        !$(e.target).closest(".btn-before2").length &&
+        !$(e.target).closest(".btn-before3").length &&
+        !$(e.target).closest(".flexible-main").length &&
+        !$(e.target).closest(".location-js").length &&
+        !$(e.target).closest(".price-list").length &&
+        !$(e.target).closest("button[name='pricelist']").length &&
+        !$(e.target).closest("button[name='langlist']").length
+    ) {
+        $(".nav-menu-js").removeClass("dis-bl");
+        $(".location-js").removeClass("dis-bl");
+        $(".price-list").removeClass("price-list-on");
+        $(".lang-list").removeClass("lang-list-on");
+        $("body").css("overflow-y", "auto");
+        $(".flexible-main").removeClass("flexible-menu-on");
+    }
+    if ($('.location-js').hasClass('dis-bl')) {
+        $(".btn-before").addClass("btn-active")
+        $(".nav-search-main").addClass("btn-main-active")
+    } else {
+        $(".btn-before").removeClass("btn-active")
+        $(".nav-search-main").removeClass("btn-main-active")
+    }
 });
 // Body overflow-x && DOM fully loaded events
 $(document).ready(function () {
-  $("body").css("overflow-x", "hidden");
+    $("body").css("overflow-x", "hidden");
 });
 
 // -------------------------section 3-------------------------
@@ -548,81 +567,81 @@ const uniqueLinks = document.querySelector(".unique-links");
 
 const titleList = [title1, title2, title3, title4, title5, title6];
 const linkList = [
-  artCultureLinks,
-  outdoorLinks,
-  mountainCabinsLinks,
-  beachLinks,
-  popularLinks,
-  uniqueLinks,
+    artCultureLinks,
+    outdoorLinks,
+    mountainCabinsLinks,
+    beachLinks,
+    popularLinks,
+    uniqueLinks,
 ];
 
 function toggleClass(title) {
-  function addNoneClass() {
-    for (var i = 0; i < linkList.length; i++) {
-      if (titleList[i] === title) {
-        continue;
-      }
-      linkList[i].classList.add("none");
+    function addNoneClass() {
+        for (var i = 0; i < linkList.length; i++) {
+            if (titleList[i] === title) {
+                continue;
+            }
+            linkList[i].classList.add("none");
+        }
     }
-  }
-  function removeNavigationButtonClass() {
-    for (var i = 0; i < titleList.length; i++) {
-      if (titleList[i] === title) {
-        continue;
-      }
-      titleList[i].classList.remove("selected-navigation-button");
+    function removeNavigationButtonClass() {
+        for (var i = 0; i < titleList.length; i++) {
+            if (titleList[i] === title) {
+                continue;
+            }
+            titleList[i].classList.remove("selected-navigation-button");
+        }
     }
-  }
 
-  if (title == titleList[0]) {
-    linkList[0].classList.remove("none");
-    titleList[0].classList.add("selected-navigation-button");
-    removeNavigationButtonClass();
-    addNoneClass();
-  } else if (title == titleList[1]) {
-    linkList[1].classList.remove("none");
-    titleList[1].classList.add("selected-navigation-button");
-    removeNavigationButtonClass();
-    addNoneClass();
-  } else if (title == titleList[2]) {
-    linkList[2].classList.remove("none");
-    titleList[2].classList.add("selected-navigation-button");
-    removeNavigationButtonClass();
-    addNoneClass();
-  } else if (title == titleList[3]) {
-    linkList[3].classList.remove("none");
-    titleList[3].classList.add("selected-navigation-button");
-    removeNavigationButtonClass();
-    addNoneClass();
-  } else if (title == titleList[4]) {
-    linkList[4].classList.remove("none");
-    titleList[4].classList.add("selected-navigation-button");
-    removeNavigationButtonClass();
-    addNoneClass();
-  } else if (title == titleList[5]) {
-    linkList[5].classList.remove("none");
-    titleList[5].classList.add("selected-navigation-button");
-    removeNavigationButtonClass();
-    addNoneClass();
-  }
+    if (title == titleList[0]) {
+        linkList[0].classList.remove("none");
+        titleList[0].classList.add("selected-navigation-button");
+        removeNavigationButtonClass();
+        addNoneClass();
+    } else if (title == titleList[1]) {
+        linkList[1].classList.remove("none");
+        titleList[1].classList.add("selected-navigation-button");
+        removeNavigationButtonClass();
+        addNoneClass();
+    } else if (title == titleList[2]) {
+        linkList[2].classList.remove("none");
+        titleList[2].classList.add("selected-navigation-button");
+        removeNavigationButtonClass();
+        addNoneClass();
+    } else if (title == titleList[3]) {
+        linkList[3].classList.remove("none");
+        titleList[3].classList.add("selected-navigation-button");
+        removeNavigationButtonClass();
+        addNoneClass();
+    } else if (title == titleList[4]) {
+        linkList[4].classList.remove("none");
+        titleList[4].classList.add("selected-navigation-button");
+        removeNavigationButtonClass();
+        addNoneClass();
+    } else if (title == titleList[5]) {
+        linkList[5].classList.remove("none");
+        titleList[5].classList.add("selected-navigation-button");
+        removeNavigationButtonClass();
+        addNoneClass();
+    }
 }
 // Loop to add event listener to all buttons
 for (var i = 0; i < titleList.length; i++) {
-  titleList[i].addEventListener("click", toggleClass.bind(null, titleList[i]));
+    titleList[i].addEventListener("click", toggleClass.bind(null, titleList[i]));
 }
 
 // ------------------search box -------------------------
 $(window).scroll(function () {
-  const scroll = window.scrollY;
-  if (scroll > 0) {
-    $(".nav-main-scroll").removeClass("none").addClass("fixed");
-    $(".nav-main").addClass("none");
-    $(".nav-search-main").addClass("none");
-  } else {
-    $(".nav-main-scroll").addClass("none").removeClass("fixed");
-    $(".nav-main").removeClass("none");
-    $(".nav-search-main").removeClass("none");
-  }
+    const scroll = window.scrollY;
+    if (scroll > 0) {
+        $(".nav-main-scroll").removeClass("none").addClass("fixed");
+        $(".nav-main").addClass("none");
+        $(".nav-search-main").addClass("none");
+    } else {
+        $(".nav-main-scroll").addClass("none").removeClass("fixed");
+        $(".nav-main").removeClass("none");
+        $(".nav-search-main").removeClass("none");
+    }
 });
 
 // ADDING EVENT LISTENER FOR THE INPUT
@@ -631,3 +650,17 @@ $(window).scroll(function () {
 //   $(".nav-main").removeClass("none");
 //   $(".nav-search-main").removeClass("none");
 // });
+
+// Calendar
+
+$('input[name="dates"]').daterangepicker();
+$('#demo').daterangepicker({
+    "autoApply": true,
+    "parentEl": "body",
+    "startDate": "09/15/2021",
+    "endDate": "09/20/2021",
+    "opens": "center"
+}, function (start, end, label) {
+    console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+});
+
