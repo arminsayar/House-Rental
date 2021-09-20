@@ -356,7 +356,7 @@ header > div:nth-child(1) {
 }
 
 .nav-link-hover:hover::before,
-.nav-link-hover2:hover::before, 
+.nav-link-hover2:hover::before,
 .nav-link-hover1:hover::before {
   transform: scaleX(1);
   display: block;
@@ -1497,6 +1497,32 @@ h3 {
 .nav-logo {
   width: 227.45px;
   cursor: pointer;
+}
+.nav-search-main-scroll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  max-width: 850px;
+  margin: 0 auto;
+  border-radius: 32px;
+  box-shadow: 0px 16px 32px rgb(0 0 0 / 15%), 0px 3px 8px rgb(0 0 0 / 10%);
+  position: relative;
+}
+.nav-search-main-scroll > button:hover {
+  background-color: #dddddd;
+}
+
+.nav-search-main-scroll > button:nth-child(1) {
+  padding: 14px 32px;
+}
+
+.nav-search-main-scroll > button:nth-child(2) {
+  padding: 14px 24px;
+}
+
+.nav-search-main-scroll > button:nth-child(3) {
+  padding: 14px 24px;
 }
 /* GENERAL CLASSES */
 .none {
