@@ -325,6 +325,7 @@ header > div:nth-child(1) {
     0.2s -webkit-transform cubic-bezier(0, 0, 0.1, 1),
     0.2s transform cubic-bezier(0, 0, 0.1, 1);
 }
+
 .nav-link-hover1::before {
   background-color: currentcolor;
   border-radius: 1px;
@@ -503,9 +504,11 @@ header > div:nth-child(1) {
   cursor: pointer;
   color: rgb(113, 113, 113);
 }
+
 .title-1 {
   margin-left: -10px;
 }
+
 .selected-navigation-button button {
   color: rgb(34, 34, 34);
   margin-left: -10px;
@@ -1219,6 +1222,22 @@ h3 {
   display: none;
 }
 
+.flexible-open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: #fff;
+  height: 410px;
+  width: 850px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 32px;
+  display: flex;
+}
+
 .flexible-menu-on {
   display: flex;
 }
@@ -1236,9 +1255,10 @@ h3 {
   padding: 4px 4px;
   margin-bottom: 30px;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 
-.flexible-main > div:nth-child(2) {
+.flexible-open > div:nth-child(1) {
   color: #717171;
   font-family: Circular BOOK;
   font-weight: 400;
@@ -1248,7 +1268,25 @@ h3 {
   margin-bottom: 10px;
 }
 
-.flexible-main > div:nth-child(4) {
+.flexible-open > div:nth-child(1) > span {
+  color: #222222;
+  font-family: Circular BOLD;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.flexible-open > div:nth-child(3) {
+  color: #717171;
+  font-family: Circular BOOK;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 18px;
+  padding: 4px 4px;
+  margin-bottom: 10px;
+}
+
+.flexible-open > div:nth-child(4) {
   color: #717171;
   font-family: Circular BOOK;
   font-weight: 400;
@@ -1258,7 +1296,7 @@ h3 {
   margin-bottom: 20px;
 }
 
-.flexible-main > div:nth-child(3) {
+.flexible-open > div:nth-child(2) {
   display: flex;
   color: #717171;
   font-family: Circular BOOK;
@@ -1293,7 +1331,7 @@ h3 {
   border: 2px solid rgb(0, 0, 0);
 }
 
-.flexible-main > div:nth-child(2) > span {
+.flexible-open > div:nth-child(3) > span {
   color: #222222;
   font-family: Circular BOLD;
   font-weight: 400;
@@ -1301,7 +1339,7 @@ h3 {
   font-size: 18px;
 }
 
-.flexible-main > div:nth-child(4) > span {
+.flexible-open > div:nth-child(4) > span {
   color: #222222;
   font-family: Circular BOLD;
   font-weight: 400;
@@ -1309,7 +1347,7 @@ h3 {
   font-size: 18px;
 }
 
-.flexible-main > div:nth-child(1) > div:nth-child(1):hover {
+.flexible-open > div:nth-child(1) > div:nth-child(1):hover {
   background-color: rgb(247, 247, 247);
   padding: 5px 18px;
   margin-right: 5px;
@@ -1324,6 +1362,12 @@ h3 {
 
 .flexible-active {
   background-color: #fff;
+  padding: 5px 18px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.flex-btn {
   padding: 5px 18px;
   border-radius: 32px;
   cursor: pointer;
@@ -1384,6 +1428,7 @@ h3 {
   background-color: rgb(255, 255, 255);
   margin-top: -5px;
 }
+
 /* .nav-main-scroll::after {
   box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px;
   transform-origin: 50% 0%;
@@ -1391,6 +1436,8 @@ h3 {
   transition-property: opacity, -ms-transform, -webkit-transform, transform;
   transition-timing-function: ease;
   content: ""; this line effects hovers
+  content: "";
+  this line effects hovers
   height: 100%;
   left: 0px;
   position: absolute;
@@ -1398,7 +1445,8 @@ h3 {
   width: 100%;
   z-index: 0;
   opacity: 1;
-} */
+}  */
+
 .nav-tx-scroll {
   height: 43px;
   display: flex;
@@ -1416,16 +1464,20 @@ h3 {
   color: rgb(34, 34, 34);
   white-space: nowrap;
 }
+
 .nav-tx-scroll:hover,
 .nav-la-scroll:hover {
   background-color: rgba(206, 206, 206, 0.15);
 }
+
 .profile-btn-scroll {
   border: 1px solid #dddddd;
 }
+
 .profile-btn-scroll:hover {
   box-shadow: 0px 2px 4px rgb(0 0 0 / 18%);
 }
+
 .logo-scroll {
   color: rgb(255, 56, 92);
 }
@@ -1445,6 +1497,7 @@ h3 {
   color: #222222;
   cursor: pointer;
 }
+
 .search-box-scroll:hover {
   box-shadow: 0px 2px 4px rgb(0 0 0 / 18%);
 }
@@ -1463,6 +1516,7 @@ h3 {
   overflow: hidden;
   color: #222222;
 }
+
 .search-box-icon {
   background-color: #ff385c;
   color: #ffffff;
@@ -1524,6 +1578,104 @@ h3 {
 .nav-search-main-scroll > button:nth-child(3) {
   padding: 14px 24px;
 }
+
+.btn-active {
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 15%) 0px 16px 32px, rgb(0 0 0 / 10%) 0px 3px 8px;
+}
+
+.btn-main-active {
+  background-color: #ebebeb;
+}
+
+.calendar-main {
+  position: absolute;
+  top: 100px;
+}
+/* GUESTS */
+.guests-popup {
+  font-family: Circular K1;
+  padding: 16px 32px;
+  height: 244px;
+  width: 394px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #fff;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-radius: 32px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 6px 20px;
+  /* display: none; */
+}
+
+.guest {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 4px 16px 0px;
+}
+.adults,
+.children {
+  border-bottom: 1px solid rgb(235, 235, 235) !important;
+}
+.guest-num {
+  font-family: Circular BOOK;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.guest-num p {
+  margin: 0px 15px;
+}
+.guest-num span {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-flex: 0;
+  width: 32px;
+  height: 32px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: inline-flex;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(176, 176, 176);
+  color: rgb(113, 113, 113);
+  /* color: rgb(235, 235, 235) !important;
+    border-color: rgb(235, 235, 235) !important; */
+  font-family: inherit;
+  outline: none;
+  touch-action: manipulation;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.disable-num {
+  color: rgb(235, 235, 235) !important;
+  border-color: rgb(235, 235, 235) !important;
+}
+.guest-titles p {
+  font-size: 16px;
+  line-height: 20px;
+  /* font-weight: 600; */
+}
+.guest-titles span {
+  font-family: Circular BOOK;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(113, 113, 113);
+}
+
 /* GENERAL CLASSES */
 .none {
   display: none;
