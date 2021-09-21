@@ -78,6 +78,15 @@ $(".flexible-active").click(function () {
   $(".flexible-open").removeClass("none");
 });
 
+$('div[name="imflexible-btn"]').click(function () {
+  $('div[name="imflexible-btn"]').addClass("flexible-active");
+  $('div[name="calendar-btn"]').removeClass("flexible-active");
+});
+$('div[name="calendar-btn"]').click(function () {
+  $('div[name="imflexible-btn"]').removeClass("flexible-active");
+  $('div[name="calendar-btn"]').addClass("flexible-active");
+});
+
 // I'm flexible
 
 $(".month-1").click(function () {
@@ -766,10 +775,6 @@ $(".search-box-scroll").click(function () {
   $(".search-box-scroll").addClass("none");
 });
 
-// Calendar
-
-$('.btn-before2, .btn-before3, div[name="calendar-btn"]').daterangepicker();
-
 // GUESTS
 const plus1 = document.querySelector(".plus1");
 const plus2 = document.querySelector(".plus2");
@@ -817,4 +822,17 @@ plus3.addEventListener("click", function () {
 });
 minus3.addEventListener("click", function () {
   if (startNum3.innerHTML > 0) startNum3.innerHTML = +startNum3.innerHTML - 1;
+});
+
+// Calendar
+
+$('.btn-before2, .btn-before3, div[name="calendar-btn"]').daterangepicker();
+
+// const calendar = $('.btn-before2').data('daterangepicker');
+
+// let startDate = calendar.startDate._d.toString('').substr(4, 6),
+//     endDate = calendar.endDate._d.toString('').substr(4, 6);
+
+$('div[name="calendar-btn"]').click(function () {
+  $(".flexible-open").addClass("none");
 });

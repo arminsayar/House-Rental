@@ -1313,13 +1313,13 @@
         if (containerWidth + containerRight > $(window).width()) {
           this.container.css({
             top: containerTop,
-            right: "auto",
+            right: 50,
             left: 9,
           });
         } else {
           this.container.css({
             top: containerTop,
-            right: containerRight,
+            right: 50,
             left: "auto",
           });
         }
@@ -1332,7 +1332,7 @@
         if (containerLeft < 0) {
           this.container.css({
             top: containerTop,
-            right: "auto",
+            right: 50,
             left: 9,
           });
         } else if (containerLeft + containerWidth > $(window).width()) {
@@ -1345,7 +1345,7 @@
           this.container.css({
             top: containerTop,
             left: containerLeft,
-            right: "auto",
+            right: 50,
           });
         }
       } else {
@@ -1354,13 +1354,13 @@
           this.container.css({
             top: containerTop,
             left: "auto",
-            right: 0,
+            right: 50,
           });
         } else {
           this.container.css({
-            top: containerTop,
-            left: containerLeft,
-            right: "auto",
+            top: 165,
+            left: -5,
+            right: 0,
           });
         }
       }
@@ -1438,11 +1438,7 @@
     },
 
     toggle: function (e) {
-      if (this.isShowing) {
-        this.hide();
-      } else {
-        this.show();
-      }
+      this.show();
     },
 
     outsideClick: function (e) {
@@ -1454,6 +1450,8 @@
         e.type == "focusin" ||
         target.closest(this.element).length ||
         target.closest(this.container).length ||
+        ($(e.target).closest(".flexible-main").length &&
+          !$(e.target).closest(".flex-btn").length) ||
         target.closest(".calendar-table").length
       )
         return;
