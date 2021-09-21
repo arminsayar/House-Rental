@@ -103,7 +103,6 @@
 }
 
 .daterangepicker.show-calendar .drp-buttons {
-  display: none;
 }
 
 .daterangepicker.auto-apply .drp-buttons {
@@ -323,8 +322,6 @@ tr>tD {
   clear: both;
   text-align: right;
   padding: 8px;
-  border-top: 1px solid #ddd;
-  display: none;
   line-height: 12px;
   vertical-align: middle;
 }
@@ -340,6 +337,7 @@ tr>tD {
   font-size: 12px;
   font-weight: bold;
   padding: 4px 8px;
+  display: none;
 }
 
 .daterangepicker.show-ranges.single.rtl .drp-calendar.left {

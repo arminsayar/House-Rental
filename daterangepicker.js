@@ -1576,4 +1576,3 @@
 
 }));
 
-$(".addDatumIn").text(moment(obj.date1).format("MMM DD"));

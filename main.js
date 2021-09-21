@@ -671,6 +671,10 @@ $(window).scroll(function () {
 
 $('.btn-before2, .btn-before3, div[name="calendar-btn"]').daterangepicker();
 
+// const calendar = $('.btn-before2').data('daterangepicker');
+
+// let startDate = calendar.startDate._d.toString('').substr(4, 6),
+//     endDate = calendar.endDate._d.toString('').substr(4, 6);
 
 $('div[name="calendar-btn"]').click(function () {
     $('.flexible-open').addClass('none');
