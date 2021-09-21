@@ -1182,12 +1182,14 @@
                 e.type == "focusin" ||
                 target.closest(this.element).length ||
                 target.closest(this.container).length ||
-                target.closest('.flexible-main').length ||
+                $(e.target).closest('.flexible-main').length &&
+                !$(e.target).closest('.flex-btn').length ||
                 target.closest('.calendar-table').length
             ) return;
             this.hide();
             this.element.trigger('outsideClick.daterangepicker', this);
         },
+
 
         showCalendars: function () {
             this.container.addClass('show-calendar');
