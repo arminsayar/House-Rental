@@ -79,6 +79,15 @@ $(".flexible-active").click(function () {
     $(".flexible-open").removeClass("none")
 })
 
+$('div[name="imflexible-btn"]').click(function () {
+    $('div[name="imflexible-btn"]').addClass('flexible-active')
+    $('div[name="calendar-btn"]').removeClass('flexible-active')
+})
+$('div[name="calendar-btn"]').click(function () {
+    $('div[name="imflexible-btn"]').removeClass('flexible-active')
+    $('div[name="calendar-btn"]').addClass('flexible-active')
+})
+
 // I'm flexible
 
 $('.month-1').click(function () {
@@ -531,6 +540,8 @@ $(document).click(function (e) {
         !$(e.target).closest(".btn-before3").length &&
         !$(e.target).closest(".flexible-main").length &&
         !$(e.target).closest(".location-js").length &&
+        !$(e.target).closest(".next").length &&
+        !$(e.target).closest(".prev").length &&
         !$(e.target).closest(".price-list").length &&
         !$(e.target).closest("button[name='pricelist']").length &&
         !$(e.target).closest("button[name='langlist']").length
@@ -658,4 +669,10 @@ $(window).scroll(function () {
 
 // Calendar
 
-$('.btn-before2, .btn-before3, .calendar-btniv[name="calendar-btn"]').daterangepicker();
+$('.btn-before2, .btn-before3, div[name="calendar-btn"]').daterangepicker();
+
+
+$('div[name="calendar-btn"]').click(function () {
+    $('.flexible-open').addClass('none');
+})
+
