@@ -646,7 +646,6 @@ $(document).click(function (e) {
     !$(e.target).closest(".btn-before3").length &&
     !$(e.target).closest(".btn-before4").length &&
     !$(e.target).closest(".flexible-main").length &&
-    !$(e.target).closest(".guests-popup").length &&
     !$(e.target).closest(".location-js").length &&
     !$(e.target).closest(".price-list").length &&
     !$(e.target).closest("button[name='pricelist']").length &&

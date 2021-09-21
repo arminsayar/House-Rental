@@ -1677,7 +1677,8 @@ h3 {
   color: rgb(113, 113, 113);
 }
 
-/* GENERAL CLASSES */
+/* GENERAL CLASSES  */
+/* ALWAYS STAY AT END */
 .none {
   display: none;
 }
@@ -1688,3 +1689,4 @@ h3 {
   left: 0;
   width: 100vw;
 }
+/* ALWAYS STAY AT END */
