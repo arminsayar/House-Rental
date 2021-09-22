@@ -843,3 +843,7 @@ $('.btn-before2, .btn-before3, div[name="calendar-btn"]').daterangepicker();
 $('div[name="calendar-btn"]').click(function () {
     $(".flexible-open").addClass("none");
 });
+// SLIDER
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel();
+  });
