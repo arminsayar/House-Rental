@@ -73,6 +73,9 @@ $(".btn-before2, .btn-before3").click(function () {
   $(".location-js").hasClass("dis-bl")
     ? $(".location-js").removeClass("dis-bl")
     : null;
+  !$(".guests-popup").hasClass("none")
+    ? $(".guests-popup").addClass("none")
+    : null;
 });
 $(".flexible-active").click(function () {
   $(".flexible-open").removeClass("none");
@@ -646,6 +649,7 @@ $(document).click(function (e) {
     !$(e.target).closest(".btn-before3").length &&
     !$(e.target).closest(".btn-before4").length &&
     !$(e.target).closest(".flexible-main").length &&
+    !$(e.target).closest(".guests-popup").length &&
     !$(e.target).closest(".location-js").length &&
     !$(e.target).closest(".price-list").length &&
     !$(e.target).closest("button[name='pricelist']").length &&
@@ -788,6 +792,9 @@ const startNum3 = document.querySelector(".start-num3");
 
 $(".btn-before4").click(function () {
   $(".guests-popup").toggleClass("none");
+  if ($(".flexible-main").hasClass("flexible-menu-on")) {
+    $(".flexible-main").removeClass("flexible-menu-on");
+  }
 });
 
 // function buttonStyle() {}
@@ -806,22 +813,23 @@ plus1.addEventListener("click", function () {
 });
 minus1.addEventListener("click", function () {
   if (startNum1.innerHTML > 0) startNum1.innerHTML = +startNum1.innerHTML - 1;
+  if (startNum1.innerHTML > -1) minus1.classList.add("disable-num");
 });
 plus2.addEventListener("click", function () {
   if (startNum2.innerHTML < 5) startNum2.innerHTML = +startNum2.innerHTML + 1;
-
   minus2.classList.remove("disable-num");
 });
 minus2.addEventListener("click", function () {
   if (startNum2.innerHTML > 0) startNum2.innerHTML = +startNum2.innerHTML - 1;
+  if (startNum2.innerHTML > -1) minus2.classList.add("disable-num");
 });
 plus3.addEventListener("click", function () {
   if (startNum3.innerHTML < 5) startNum3.innerHTML = +startNum3.innerHTML + 1;
-
   minus3.classList.remove("disable-num");
 });
 minus3.addEventListener("click", function () {
   if (startNum3.innerHTML > 0) startNum3.innerHTML = +startNum3.innerHTML - 1;
+  if (startNum3.innerHTML > -1) minus3.classList.add("disable-num");
 });
 
 // Calendar
