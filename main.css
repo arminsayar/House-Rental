@@ -1985,15 +1985,16 @@ h3 {
   #footer-p2-main {
     flex-direction: column;
   }
+}
 
-  /* GENERAL CLASSES */
-  .none {
-    display: none;
-  }
+/* GENERAL CLASSES */
+.none {
+  display: none;
+}
 
-  .fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-  }
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
