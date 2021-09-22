@@ -1696,6 +1696,9 @@ h3 {
 }
 
 /* -------------------MEDIA QUERIES-------------------- */
+
+/* Responsive for 1275px to 1127px */
+
 /* Responsive for 1127px to 743px */
 
 @media (max-width: 1127px) {
@@ -1808,8 +1811,141 @@ h3 {
   #footer-p1-main {
     justify-content: flex-end;
   }
+  #footer-p1-main ul {
+    width: 210px;
+  }
 }
+/* Responsive for 743 to 480 */
+@media (max-width: 743px) {
+  .nav-main {
+    display: none;
+  }
+  #responsive-display {
+    display: flex;
+  }
+  .nav-search-main {
+    display: none;
+  }
+  .nav-logo,
+  #nav-pannel {
+    display: none;
+  }
+  .nav-main-scroll {
+    background-color: transparent;
+    padding: 16px 24px;
+  }
+  .search-box-scroll {
+    width: 740px;
+  }
+  .nav-links {
+    font-size: 14px;
+    padding-top: 10px 12px;
+    width: 120px;
+  }
+  .explore-title,
+  .live-title {
+    font-size: 22px;
+  }
 
+  .nav-main {
+    padding: 0 40px;
+  }
+
+  .explore-item {
+    width: 243px;
+  }
+
+  .explore-item:nth-child(5),
+  .explore-item:nth-child(6),
+  .explore-item:nth-child(7),
+  .explore-item:nth-child(8) {
+    display: none;
+  }
+
+  .section-1-explore {
+    padding: 0 40px;
+  }
+
+  .explore-item > div > img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .live-item > img {
+    width: 200px;
+    height: auto;
+  }
+}
+/* Responsive for screens smaller than 480  */
+@media (max-width: 480px) {
+  .nav-main {
+    display: none;
+  }
+  #responsive-display {
+    display: flex;
+  }
+  .nav-search-main {
+    display: none;
+  }
+  .nav-logo,
+  #nav-pannel {
+    display: none;
+  }
+  .nav-main-scroll {
+    background-color: transparent;
+    padding: 16px 24px;
+  }
+  .search-box-scroll {
+    width: 740px;
+  }
+  .nav-links {
+    font-size: 14px;
+    padding-top: 10px 12px;
+    width: 120px;
+  }
+  .explore-title,
+  .live-title {
+    font-size: 22px;
+  }
+  .sec2-p2-img {
+    width: 160px;
+  }
+
+  .nav-main {
+    padding: 0 40px;
+  }
+
+  .explore-item {
+    width: 243px;
+  }
+
+  .explore-item:nth-child(5),
+  .explore-item:nth-child(6),
+  .explore-item:nth-child(7),
+  .explore-item:nth-child(8) {
+    display: none;
+  }
+
+  .section-1-explore {
+    padding: 0 40px;
+  }
+
+  .explore-item > div > img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .live-item > img {
+    width: 200px;
+    height: auto;
+  }
+  .live-flex > div:nth-child(3) {
+    display: none;
+  }
+  #sec2-p2-main > div:nth-child(2) {
+    display: none;
+  }
+}
 /* GENERAL CLASSES */
 .none {
   display: none;
