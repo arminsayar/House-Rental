@@ -258,13 +258,13 @@ header > div:nth-child(1) {
   transform: scaleX(1);
 }
 
-#nav-pannel {
+.nav-pannel {
   display: flex;
   align-items: center;
   color: #f1f1f1;
 }
 
-#nav-pannel > button {
+.nav-pannel > button {
   position: relative;
 }
 
@@ -1418,6 +1418,11 @@ h3 {
 /* --------------SEARCHBAR------------- */
 
 .nav-main-scroll {
+  box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px;
+  transform-origin: 50% 0%;
+  transition-duration: 150ms;
+  transition-property: opacity, -ms-transform, -webkit-transform, transform;
+  transition-timing-function: ease;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -1429,24 +1434,6 @@ h3 {
   background-color: rgb(255, 255, 255);
   margin-top: -5px;
 }
-
-/* .nav-main-scroll::after {
-  box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px;
-  transform-origin: 50% 0%;
-  transition-duration: 150ms;
-  transition-property: opacity, -ms-transform, -webkit-transform, transform;
-  transition-timing-function: ease;
-  content: ""; this line effects hovers
-  content: "";
-  this line effects hovers
-  height: 100%;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  z-index: 0;
-  opacity: 1;
-}  */
 
 .nav-tx-scroll {
   height: 43px;
@@ -1597,7 +1584,10 @@ h3 {
   position: absolute;
   top: 100px;
 }
-
+.nav-search-main-scroll {
+  background-color: rgb(255, 255, 255);
+  z-index: 999999;
+}
 /* GUESTS */
 .guests-popup {
   font-family: Circular K1;
@@ -1832,7 +1822,7 @@ h3 {
   }
 
   .nav-logo,
-  #nav-pannel {
+  .nav-pannel {
     display: none;
   }
 
@@ -1901,7 +1891,7 @@ h3 {
   }
 
   .nav-logo,
-  #nav-pannel {
+  .nav-pannel {
     display: none;
   }
 
@@ -1998,4 +1988,16 @@ h3 {
   top: 0;
   left: 0;
   width: 100vw;
+}
+.fixed-pannel {
+  position: fixed;
+  top: 80px;
+  left: 17%;
+  width: 100vw;
+}
+
+.fixed-height {
+  height: 180px;
+  padding: 20px 80px 0px 80px;
+  align-items: initial;
 }

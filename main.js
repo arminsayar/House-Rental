@@ -765,18 +765,23 @@ $(window).scroll(function () {
     $(".nav-search-main").addClass("none");
     $(".nav-texts-scroll").addClass("none");
     $(".search-box-scroll").removeClass("none");
+    $(".nav-search-main-scroll").addClass("none");
+    $(".nav-main-scroll").removeClass("fixed-height");
   } else {
     $(".nav-main-scroll").addClass("none").removeClass("fixed");
     $(".nav-main").removeClass("none");
     $(".nav-search-main").removeClass("none");
+    $(".nav-search-main-scroll").addClass("none");
+    $(".nav-main-scroll").removeClass("fixed-height");
   }
 });
 
 // ADDING EVENT LISTENER FOR THE INPUT
 $(".search-box-scroll").click(function () {
-  // $(".nav-main-scroll").addClass("none").removeClass("fixed");
   $(".nav-texts-scroll").removeClass("none");
   $(".search-box-scroll").addClass("none");
+  $(".nav-search-main-scroll").removeClass("none").addClass("fixed-pannel");
+  $(".nav-main-scroll").addClass("fixed-height");
 });
 
 // GUESTS
