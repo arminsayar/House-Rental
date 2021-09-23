@@ -816,6 +816,10 @@ plus2.addEventListener("click", function () {
   if (startNum2.innerHTML < 5) startNum2.innerHTML = +startNum2.innerHTML + 1;
   minus2.classList.remove("disable-num");
   if (startNum2.innerHTML > 4) plus2.classList.add("disable-num");
+  if (startNum1.innerHTML === '0' && startNum2.innerHTML === '1') {
+    startNum1.innerHTML = +startNum1.innerHTML + 1;
+    minus1.classList.remove("disable-num")
+  }
 });
 minus2.addEventListener("click", function () {
   if (startNum2.innerHTML > 0) startNum2.innerHTML = +startNum2.innerHTML - 1;
@@ -826,6 +830,10 @@ plus3.addEventListener("click", function () {
   if (startNum3.innerHTML < 5) startNum3.innerHTML = +startNum3.innerHTML + 1;
   minus3.classList.remove("disable-num");
   if (startNum3.innerHTML > 4) plus3.classList.add("disable-num");
+  if (startNum1.innerHTML === '0' && startNum3.innerHTML === '1') {
+    startNum1.innerHTML = +startNum1.innerHTML + 1;
+    minus1.classList.remove("disable-num")
+  }
 });
 minus3.addEventListener("click", function () {
   if (startNum3.innerHTML > 0) startNum3.innerHTML = +startNum3.innerHTML - 1;
