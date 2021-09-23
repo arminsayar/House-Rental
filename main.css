@@ -1641,7 +1641,7 @@ h3 {
   margin: 0px 15px;
 }
 
-.guest-num span {
+.guest-num-span {
   -webkit-box-pack: center;
   -webkit-box-align: center;
   -webkit-box-flex: 0;
@@ -1673,6 +1673,7 @@ h3 {
 .disable-num {
   color: rgb(235, 235, 235) !important;
   border-color: rgb(235, 235, 235) !important;
+  cursor: not-allowed;
 }
 
 .guest-titles p {
