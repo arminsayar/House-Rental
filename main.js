@@ -797,39 +797,35 @@ $(".btn-before4").click(function () {
   }
 });
 
-// function buttonStyle() {}
-
-// function incrementNum() {
-//   console.log(+startNum1.innerHTML);
-//   startNum1.innerHTML = +startNum1.innerHTML + 1;
-// }
-// function decrementNum() {
-//   console.log(+startNum1.innerHTML);
-//   startNum1.innerHTML = +startNum1.innerHTML - 1;
-// }
 plus1.addEventListener("click", function () {
   if (startNum1.innerHTML < 16) startNum1.innerHTML = +startNum1.innerHTML + 1;
   minus1.classList.remove("disable-num");
+  if (startNum1.innerHTML > 15) plus1.classList.add("disable-num");
 });
 minus1.addEventListener("click", function () {
   if (startNum1.innerHTML > 0) startNum1.innerHTML = +startNum1.innerHTML - 1;
-  if (startNum1.innerHTML > -1) minus1.classList.add("disable-num");
+  if (startNum1.innerHTML < 1) minus1.classList.add("disable-num");
+  if (startNum1.innerHTML < 16) plus1.classList.remove("disable-num");
 });
 plus2.addEventListener("click", function () {
   if (startNum2.innerHTML < 5) startNum2.innerHTML = +startNum2.innerHTML + 1;
   minus2.classList.remove("disable-num");
+  if (startNum2.innerHTML > 4) plus2.classList.add("disable-num");
 });
 minus2.addEventListener("click", function () {
   if (startNum2.innerHTML > 0) startNum2.innerHTML = +startNum2.innerHTML - 1;
-  if (startNum2.innerHTML > -1) minus2.classList.add("disable-num");
+  if (startNum2.innerHTML < 1) minus2.classList.add("disable-num");
+  if (startNum2.innerHTML < 5) plus2.classList.remove("disable-num");
 });
 plus3.addEventListener("click", function () {
   if (startNum3.innerHTML < 5) startNum3.innerHTML = +startNum3.innerHTML + 1;
   minus3.classList.remove("disable-num");
+  if (startNum3.innerHTML > 4) plus3.classList.add("disable-num");
 });
 minus3.addEventListener("click", function () {
   if (startNum3.innerHTML > 0) startNum3.innerHTML = +startNum3.innerHTML - 1;
-  if (startNum3.innerHTML > -1) minus3.classList.add("disable-num");
+  if (startNum3.innerHTML < 1) minus3.classList.add("disable-num");
+  if (startNum3.innerHTML < 5) plus3.classList.remove("disable-num");
 });
 
 // Calendar
@@ -845,6 +841,6 @@ $('div[name="calendar-btn"]').click(function () {
   $(".flexible-open").addClass("none");
 });
 // SLIDER
-$(document).ready(function(){
-    $(".owl-carousel").owlCarousel();
-  });
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel();
+});
