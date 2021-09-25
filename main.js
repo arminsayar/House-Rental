@@ -769,12 +769,14 @@ $(window).scroll(function () {
     $(".search-box-scroll").removeClass("none");
     $(".nav-search-main-scroll").addClass("none");
     $(".nav-main-scroll").removeClass("fixed-height");
+    $('#nav-btn-main').css('margin-top', '160px');
   } else {
     $(".nav-main-scroll").addClass("none").removeClass("fixed");
     $(".nav-main").removeClass("none");
     $(".nav-search-main").removeClass("none");
     $(".nav-search-main-scroll").addClass("none");
     $(".nav-main-scroll").removeClass("fixed-height");
+    $('#nav-btn-main').css('margin-top', '0');
   }
 });
 
@@ -857,10 +859,14 @@ plus1_1.addEventListener("click", function () {
   minus1_1.classList.remove("disable-num");
   if (startNum1_1.innerHTML > 15) plus1_1.classList.add("disable-num");
 });
-minus1_1.addEventListener("click", function () {
+minus1_1.addEventListener("click", function (e) {
   if (startNum1_1.innerHTML > 0) startNum1_1.innerHTML = +startNum1_1.innerHTML - 1;
   if (startNum1_1.innerHTML < 1) minus1_1.classList.add("disable-num");
   if (startNum1_1.innerHTML < 16) plus1_1.classList.remove("disable-num");
+  if (startNum2_2.innerHTML === '1' || startNum3_3.innerHTML === '1') {
+    startNum1_1.innerHTML = 1;
+    minus1_1.classList.remove("disable-num")
+  }
 });
 plus2_2.addEventListener("click", function () {
   if (startNum2.innerHTML < 5) startNum2_2.innerHTML = +startNum2_2.innerHTML + 1;
@@ -902,8 +908,4 @@ $('.btn-before2, .btn-before3, div[name="calendar-btn"]').daterangepicker();
 
 $('div[name="calendar-btn"]').click(function () {
   $(".flexible-open").addClass("none");
-});
-// SLIDER
-$(document).ready(function () {
-  $(".owl-carousel").owlCarousel();
 });
