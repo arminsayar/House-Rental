@@ -762,7 +762,8 @@ for (var i = 0; i < titleList.length; i++) {
 $(window).scroll(function () {
   const scroll = window.scrollY;
   if (scroll > 0) {
-    $(".nav-main-scroll").removeClass("none").addClass("fixed");
+    $(".nav-main-scroll").addClass("nav-main-scroll-active");
+    $(".search-box-scroll").addClass("search-box-scroll-active");
     $(".nav-main").addClass("none");
     $(".nav-search-main").addClass("none");
     $(".nav-texts-scroll").addClass("none");
@@ -771,7 +772,9 @@ $(window).scroll(function () {
     $(".nav-main-scroll").removeClass("fixed-height");
     $('#nav-btn-main').css('margin-top', '160px');
   } else {
-    $(".nav-main-scroll").addClass("none").removeClass("fixed");
+    $(".nav-main-scroll").removeClass("nav-main-scroll-active");
+    $(".search-box-scroll").removeClass("search-box-scroll-active");
+    $(".nav-main-scroll").removeClass("fixed");
     $(".nav-main").removeClass("none");
     $(".nav-search-main").removeClass("none");
     $(".nav-search-main-scroll").addClass("none");
