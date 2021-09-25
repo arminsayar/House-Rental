@@ -103,6 +103,7 @@
 }
 
 .daterangepicker.show-calendar .drp-buttons {
+  display: none;
 }
 
 .daterangepicker.auto-apply .drp-buttons {
