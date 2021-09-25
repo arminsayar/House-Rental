@@ -794,6 +794,15 @@ const minus3 = document.querySelector(".minus3");
 const startNum1 = document.querySelector(".start-num1");
 const startNum2 = document.querySelector(".start-num2");
 const startNum3 = document.querySelector(".start-num3");
+const plus1_1 = document.querySelector(".plus1_1");
+const plus2_2 = document.querySelector(".plus2_2");
+const plus3_3 = document.querySelector(".plus3_3");
+const minus1_1 = document.querySelector(".minus1_1");
+const minus2_2 = document.querySelector(".minus2_2");
+const minus3_3 = document.querySelector(".minus3_3");
+const startNum1_1 = document.querySelector(".start-num1_1");
+const startNum2_2 = document.querySelector(".start-num2_2");
+const startNum3_3 = document.querySelector(".start-num3_3");
 
 $(".btn-before4").click(function () {
   $(".guests-popup").toggleClass("none");
@@ -839,6 +848,45 @@ minus3.addEventListener("click", function () {
   if (startNum3.innerHTML > 0) startNum3.innerHTML = +startNum3.innerHTML - 1;
   if (startNum3.innerHTML < 1) minus3.classList.add("disable-num");
   if (startNum3.innerHTML < 5) plus3.classList.remove("disable-num");
+});
+
+plus1_1.addEventListener("click", function () {
+  if (startNum1_1.innerHTML < 16) startNum1_1.innerHTML = +startNum1_1.innerHTML + 1;
+  minus1_1.classList.remove("disable-num");
+  if (startNum1_1.innerHTML > 15) plus1_1.classList.add("disable-num");
+});
+minus1_1.addEventListener("click", function () {
+  if (startNum1_1.innerHTML > 0) startNum1_1.innerHTML = +startNum1_1.innerHTML - 1;
+  if (startNum1_1.innerHTML < 1) minus1_1.classList.add("disable-num");
+  if (startNum1_1.innerHTML < 16) plus1_1.classList.remove("disable-num");
+});
+plus2_2.addEventListener("click", function () {
+  if (startNum2.innerHTML < 5) startNum2_2.innerHTML = +startNum2_2.innerHTML + 1;
+  minus2_2.classList.remove("disable-num");
+  if (startNum2_2.innerHTML > 4) plus2_2.classList.add("disable-num");
+  if (startNum1_1.innerHTML === '0' && startNum2_2.innerHTML === '1') {
+    startNum1_1.innerHTML = +startNum1_1.innerHTML + 1;
+    minus1_1.classList.remove("disable-num")
+  }
+});
+minus2_2.addEventListener("click", function () {
+  if (startNum2_2.innerHTML > 0) startNum2_2.innerHTML = +startNum2_2.innerHTML - 1;
+  if (startNum2_2.innerHTML < 1) minus2_2.classList.add("disable-num");
+  if (startNum2_2.innerHTML < 5) plus2_2.classList.remove("disable-num");
+});
+plus3_3.addEventListener("click", function () {
+  if (startNum3_3.innerHTML < 5) startNum3_3.innerHTML = +startNum3_3.innerHTML + 1;
+  minus3_3.classList.remove("disable-num");
+  if (startNum3_3.innerHTML > 4) plus3_3.classList.add("disable-num");
+  if (startNum1_1.innerHTML === '0' && startNum3_3.innerHTML === '1') {
+    startNum1_1.innerHTML = +startNum1_1.innerHTML + 1;
+    minus1_1.classList.remove("disable-num")
+  }
+});
+minus3_3.addEventListener("click", function () {
+  if (startNum3_3.innerHTML > 0) startNum3_3.innerHTML = +startNum3_3.innerHTML - 1;
+  if (startNum3_3.innerHTML < 1) minus3_3.classList.add("disable-num");
+  if (startNum3_3.innerHTML < 5) plus3_3.classList.remove("disable-num");
 });
 
 // Calendar
