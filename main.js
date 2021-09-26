@@ -872,7 +872,7 @@ minus1_1.addEventListener("click", function (e) {
   }
 });
 plus2_2.addEventListener("click", function () {
-  if (startNum2.innerHTML < 5) startNum2_2.innerHTML = +startNum2_2.innerHTML + 1;
+  if (startNum2_2.innerHTML < 5) startNum2_2.innerHTML = +startNum2_2.innerHTML + 1;
   minus2_2.classList.remove("disable-num");
   if (startNum2_2.innerHTML > 4) plus2_2.classList.add("disable-num");
   if (startNum1_1.innerHTML === '0' && startNum2_2.innerHTML === '1') {
